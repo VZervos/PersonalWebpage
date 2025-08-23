@@ -1,0 +1,22 @@
+@media (max-width: 992px) {
+    nav {
+        background-color: #098300;
+        flex-direction: row;
+    }
+
+    footer {
+        background-color: #098300;
+    }
+
+    .sidebar {
+        background-color: #098300;
+    }
+
+    section {
+        background-color: #098300;
+    }
+
+    .section-content {
+        background-color: #cbffc8;
+    }
+}

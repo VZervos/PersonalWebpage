@@ -1,0 +1,22 @@
+@media (max-width: 576px) {
+    nav {
+        background-color: #9b7a00;
+    }
+
+    footer {
+        background-color: #9b7a00;
+    }
+
+    .sidebar {
+        background-color: #9b7a00;
+    }
+
+    section {
+        background-color: #9b7a00;
+    }
+
+    .section-content {
+        background-color: #ffe58e;
+    }
+
+}
