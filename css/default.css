@@ -207,6 +207,13 @@ nav {
     font-size: 1.1rem;
 }
 
+.subtitle {
+    min-width: 140px;
+    font-weight: bold;
+    color: #2584ff;
+    font-size: 0.9rem;
+}
+
 .details {
     flex: 1;
 }
