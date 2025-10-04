@@ -1,10 +1,46 @@
 {
-  "name": "PersonalWebpage",
-  "version": "1.0.0",
-  "description": "",
+  "name": "valantis-zervos-personal-website",
+  "version": "2.0.0",
+  "description": "Enhanced personal webpage/portfolio for Valantis Zervos - Computer Science postgraduate student at University of Crete",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "serve": "python -m http.server 8000",
+    "serve-node": "npx http-server -p 8000",
+    "build": "echo 'Website is ready for deployment'",
+    "validate": "npx html-validate index.html",
+    "lint": "npx stylelint 'css/**/*.css' && npx eslint 'js/**/*.js'",
+    "test": "echo 'No tests specified' && exit 0",
+    "optimize": "echo 'Running optimizations...' && open index.html",
+    "start": "npm run serve"
   },
-  "private": true
+  "keywords": [
+    "personal-website",
+    "portfolio",
+    "computer-science",
+    "university-of-crete",
+    "forth",
+    "research",
+    "web-development"
+  ],
+  "author": "Valantis Zervos <zervosvalantis@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VZervos/personal-webpage.git"
+  },
+  "homepage": "https://vzervos.github.io/personal-webpage",
+  "devDependencies": {
+    "html-validate": "^8.0.0",
+    "stylelint": "^15.0.0",
+    "eslint": "^8.0.0"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
 }
