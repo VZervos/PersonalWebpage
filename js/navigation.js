@@ -308,3 +308,4 @@ document.addEventListener('visibilitychange', () => {
         window.enhancedNav.updateScrollToTopVisibility();
     }
 });
+
