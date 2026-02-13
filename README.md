@@ -89,17 +89,28 @@ A modern, responsive personal webpage showcasing academic achievements, research
 PersonalWebpage/
 ├── index.html                 # Main HTML file with enhanced navigation
 ├── index.js                   # Enhanced main JavaScript file
+├── data/
+│   ├── cv-data.json         # Your CV data (edit this!)
+│   └── README.md            # Data structure documentation
+├── sections/                # Auto-generated HTML sections
+│   ├── short-bio.html
+│   ├── education.html
+│   └── ... (other sections)
+├── scripts/
+│   └── generate-sections.js # HTML generator from JSON
 ├── css/
 │   ├── default.css           # Enhanced main stylesheet
-│   ├── mobile.css            # Mobile-specific styles (ready for enhancement)
-│   └── tablet.css            # Tablet-specific styles (ready for enhancement)
+│   ├── mobile.css            # Mobile-specific styles
+│   └── tablet.css            # Tablet-specific styles
 ├── js/
 │   ├── navigation.js         # Modern navigation system
+│   ├── section-loader.js     # Dynamic section loader
 │   ├── fb_share.js          # Facebook sharing functionality
 │   └── open_secret.js        # Secret page opener
 ├── resources/
-│   └── me.jpg                # Profile image
+│   └── me.png                # Profile image
 ├── package.json              # Enhanced with useful scripts
+├── QUICK_START.md            # Quick editing guide
 └── README.md                 # This documentation
 ```
 
@@ -138,11 +149,40 @@ PersonalWebpage/
    python -m http.server 8000
    ```
 
-## 🛠 Development
+## 📝 Editing Your CV Content
+
+### Easy Data-Driven Editing
+
+Instead of editing HTML or LaTeX directly, you can now edit a simple JSON file!
+
+1. **Edit your data**: Open `data/cv-data.json` and update your information
+2. **Generate HTML sections**: Run `python generate_html.py`
+3. **Generate LaTeX CV** (optional): Run `python generate_latex.py`
+4. **View changes**: Refresh your browser to see HTML updates
+
+**See `QUICK_START.md` for a quick guide, or `data/README.md` for detailed documentation.**
+
+### Commands
+
+- `python generate_html.py` - Generate all HTML sections from JSON
+- `python generate_latex.py` - Generate LaTeX CV from JSON
+
+**No npm, no Node.js, no dependencies** - Just Python (standard library only)!
+
+### LaTeX CV Generation
+
+The system generates a LaTeX CV (`cv.tex`) that matches your original LaTeX structure and style:
+- Maintains exact label conventions (HA:, ED:, PUB:, etc.)
+- Preserves hyperref cross-references
+- Matches date formatting and section structure
+- Compile with: `pdflatex cv.tex` (run twice for cross-references)
 
 ### Available Scripts
 - `npm start` - Start local development server
 - `npm run serve` - Alternative server command
+- `npm run build` - Generate both HTML sections and LaTeX CV from JSON data
+- `npm run build:html` - Generate only HTML sections
+- `npm run build:latex` - Generate only LaTeX CV
 - `npm run validate` - Validate HTML structure
 - `npm run lint` - Check code quality
 

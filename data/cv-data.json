@@ -1,0 +1,457 @@
+{
+  "personal": {
+    "firstName": "Spyridon Chrysovalantis",
+    "lastName": "Zervos",
+    "title": [
+      "Postgraduate Student at Computer Science Department, University of Crete",
+      "Graduate Research Fellow at Information Systems Laboratory, ICS-FORTH,",
+      "Member of the INGENIUM Student Board for the University of Crete"
+    ],
+    "addressLine1": "Voutes Campus, University of Crete",
+    "addressLine2": "70013 Heraklion, Greece",
+    "phone": "+30 6975908045",
+    "email": "zervosvalantis@gmail.com",
+    "github": "VZervos",
+    "linkedin": "VZervos"
+  },
+  "shortBio": {
+    "paragraphs": [
+      "I am currently a postgraduate student at the Computer Science Department of the University of Crete (CSD, UoC), which has been ranked first in Greece in Informatics/Computer Science for 2025. I hold a BSc from the same department with a grade of 9.57/10, ranking second among my year's admission 40 graduate students (179 still active as of Jan 2026).",
+      "Since my second year of undergraduate studies, I have been an undergraduate scholar at FORTH-ICS. I have worked on the technological upgrade of the openABEKT system, commissioned by the National Documentation and Electronic Content Centre of Greece (EKT). Over the past two years, I have conducted research on both national and international research projects at the Information Systems Laboratory (ISL) of ICS-FORTH. Currently, I am a graduate researcher working on the research projects of the laboratory as well as on my master's thesis. Up to now, I have published three (3) research papers and one (1) technical report.",
+      "I have been awarded three (3) scholarships, along with four (4) other distinctions and awards, and I have been ranked in the Top-5 in three (3) contests, as well as ranking 8th nationwide for the HIAS scholarship (2024) and placing in the top 13% of applicants for EPFL worldwide (2025). Additionally, I held a distinguished Undergraduate Teaching Assistant position in my department, and nowadays, I am a member of the INGENIUM Student Board, representative of the University of Crete.",
+      "My primary research interests include Web and Semantic Data Management, Natural Language Processing (NLP), full-stack programming, and the integration of these fields with Large Language Models (LLMs)."
+    ]
+  },
+  "education": {
+    "entries": [
+      {
+        "title": "MSc Candidate (2025-Present)",
+        "school": "Computer Science Department, University of Crete (CSD, UoC)"
+      },
+      {
+        "title": "BSc (2021–2025)",
+        "school": "Computer Science Department, University of Crete (CSD, UoC)",
+        "grade": "Grade: 9.57/10 (Ranked second)",
+        "note": "Ranked 2nd among 74 graduates (July 2025)\nRanked 2nd in the 2021-2022 admission cohort (40 graduates out of 179 admitted and still active as of Jan 2026)."
+      },
+      {
+        "title": "High School Diploma \"Apolytirio\" (2018-2021)",
+        "school": "General High School of Kastellanoi Messis Kerkyras",
+        "grade": "Grade: 19.6/20"
+      }
+    ]
+  },
+  "honorsAwards": {
+    "entries": [
+      {
+        "date": "November 2025",
+        "title": "\"Evangelos Kastamonitis\" Postgraduate Scholarship",
+        "institution": "Rotary Club Corfu",
+        "description": "Scholarship awarded by Rotary Club Corfu to one Corfiot postgraduate student based on their academic performance, economic situation, and activity. It lasts until graduation if the student maintains their performance. This was the very first postgraduate scholarship to be offered by the Rotary Club of Corfu."
+      },
+      {
+        "date": "July 2025",
+        "title": "Ranked second among my year's admission students, \"Elisabeth Karamitzou\" Award",
+        "institution": "University of Crete (UoC)",
+        "description": "An annual award given to the top three students of each department of the University of Crete who completed their studies within the prescribed period of study, and based on their grades. I was ranked second among my year's admission students with a grade of 9.57/10."
+      },
+      {
+        "date": "January 2025",
+        "title": "Top 13%, Summer@EPFL Internship Program",
+        "institution": "Ecole Polytechnique Federale de Lausanne (EPFL)",
+        "description": "I was shortlisted and ranked among the top 13% of all 5900 applicants worldwide in the Summer@EPFL Internship Program of the Ecole Polytechnique Federale de Lausanne, based on academic performance and curriculum vitae (CV). (Final selection not awarded.)"
+      },
+      {
+        "date": "September 2025, 2024",
+        "title": "DEPROFOIT Distinction",
+        "institution": "Computer Science Department, University of Crete",
+        "description": "Praise awarded by the Department of Computer Science, University of Crete for successfully taking on a teaching assistantship during the academic year. The related courses were CS252: Object-Oriented Programming, CS109: English II, and CS209: English IV for both awards."
+      },
+      {
+        "date": "March 2024",
+        "title": "Eighth place, Nicholas and Robert Askounes Ashford Educational Scholarship",
+        "institution": "Hellenic Institute of Advanced Studies (HIAS)",
+        "description": "I was ranked 8th in Greece in the Nicholas and Robert Askounes Ashford Educational Scholarship of the Hellenic Institute of Advanced Studies, based on academic performance and research proposal (final selection not awarded)."
+      },
+      {
+        "date": "November 2023",
+        "title": "\"Evangelos Kastamonitis\" Undergraduate Scholarship",
+        "institution": "Rotary Club Corfu",
+        "description": "Scholarship awarded by Rotary Club Corfu to one Corfiot undergraduate student based on their academic performance, economic situation, and activity. Lasts until graduation if the student maintains their performance."
+      },
+      {
+        "date": "July 2023",
+        "title": "FORTH Undergraduate Student Scholarship",
+        "institution": "Institute of Computer Science (ICS), Foundation for Research and Technology - Hellas (FORTH)",
+        "description": "Scholarship awarded by the Information Systems Laboratory (ISL), FORTH to undergraduate students of the lab. Lasts while the student is active and productive on ISL and until graduation."
+      }
+    ],
+    "contests": [
+      {
+        "date": "26-30 January 2026",
+        "title": "1st Place, ApolloMed (INGENIUM Senior Winter School 2026",
+        "institution": "TUIASI, Romania",
+        "description": "Developed and presented ApolloMed, an AI model designed to provide medical recommendations to healthcare stakeholders, within the Blended Intensive Programme (BIP) on Ethical AI Development. Contributed to the full project dossier, focusing on the system’s design, ethical considerations, and real-world applicability. The project was awarded 1st place among 4 teams in the Ethical AI Development BIP and ranked in the Top 3 among the 12 teams across all three BIPs."
+      },
+      {
+        "date": "2-3 October 2025",
+        "title": "5th Place, MentorMind (FuturEd AI Hackathon)",
+        "institution": "Computer Science Department, University of Crete",
+        "description": "Designed and implemented an AI Mentor platform in 24 hours during the FuturED AI Hackathon. The Mentor could provide assistance and suggestions to the user for academic issues based on their preferences, ranging from structured options like professors and topics, to unstructured free text, based to the department schedule and study guide. The frontend was implemented in ReactJS and MaterialUI, the backend was a RAG implementation in JavaScript, the communication was based upon services architecture, and the text from the department documents was extracted using AI methods. The project was ranked as 5th out of the 16 projects presented, with a near-tie for 4th place."
+      },
+      {
+        "date": "18 June 2024",
+        "title": "2nd place, Triangle (MEM-343: Entrepreneurship and Innovation course)",
+        "institution": "Department of Mathematics and Applied Mathematics, University of Crete",
+        "description": "The business idea Triangle got second place in the open-to-the-public business idea presentation event in the context of the Innovation and Entrepreneurship course. The business ideas presented were evaluated by a five-member jury, with Triangle taking – in a tie – 2nd place among 15+ other projects."
+      }
+    ]
+  },
+  "publications": {
+    "byYear": {
+      "2025": [
+        {
+          "authors": "Sophia Sideri, Emmanouil Patronakis, Evangelos Nikiforos, Isidoros Chatzichrysos, Apostolos Baniotis, Valantis Zervos, Stavros Tzormpatzakis, Michalis Saridakis, Iosif Oikonomakis, Michalis Mountantonakis, Pavlos Fafalios and Yannis Tzitzikas",
+          "title": "To Automate or not to Automate the Transcription of Ancient Earthquakes: Toward a Global Knowledge Graph about Ancient Earthquakes, IJCKG 2025",
+          "url": "https://x.com/ijckg2025/status/1979085877121815026"
+        },
+        {
+          "authors": "Iordanis Sapidis, Valantis Zervos, Michalis Mountantonakis, and Yannis Tzitzikas",
+          "title": "Interactive and Provenance-aware Search and QA over Documents using LLMs, RAG and Knowledge Graph Verbalization, TPDL 2025",
+          "url": "https://users.ics.forth.gr/~tzitzik/publications/Tzitzikas_2025-09-TPDL-KGRAG.pdf"
+        }
+      ],
+      "2024": [
+        {
+          "authors": "Yannis Marketakis, Michalis Mountantonakis, Pavlos Fafalios, Valantis Zervos, Arne Langlet, Anton Ellenbroek, Kim J. Friedman, and Yannis Tzitzikas",
+          "title": "Analysis of Large Numbers of Scientific Papers: A Case Study on Finding the Focus of Ecosystem Restoration Intervention",
+          "status": "Under preparation",
+          "status2": "To submit at Ecological Modelling Journal"
+        }
+      ]
+    }
+  },
+  "technicalReports": {
+    "byYear": {
+      "2024": [
+        {
+          "authors": "Yannis Marketakis, Yannis Tzitzikas, Pavlos Fafalios, Michalis Mountantonakis, and Valantis Zervos",
+          "title": "Analysis of the 'focus' and 'sentiment' of restoration interventions in the aquatic domain",
+          "status": "Delivered to FAO-UN, Sep 2024"
+        }
+      ]
+    }
+  },
+  "workExperience": {
+    "entries": [
+      {
+        "date": "Nov 2025 - Present",
+        "title": "Member of the INGENIUM Student Board",
+        "institution": "Representative of the University of Crete",
+        "description": "Work with the other student representatives chosen from INGENIUM universities on discussing regulations, projects, and other activities involving students and the partner universities."
+      },
+      {
+        "date": "Oct 2023 - Present",
+        "title": "University Teaching Assistant",
+        "institution": "Computer Science Department, University of Crete, Heraklion, Greece",
+        "description": "Responsibilities: Corrected and designed assignments, conducted office hours, presented tutorials, organized and managed course (along with Professor), and course platforms for the courses:",
+        "courses": [
+          "CS252: Object-Oriented Programming (Fall 2023, 2024, 2025) [∼360 students]",
+          "CS109: English II (Spring 2024, 2025) [∼200 students]",
+          "CS209: English IV (Spring 2024, 2025) [∼220 students]"
+        ]
+      },
+      {
+        "date": "July 2023 - Present",
+        "title": "Graduate Researcher at FORTH",
+        "institution": "FORTH-Institute of Computer Science, Heraklion, Greece",
+        "description": "Previously: Undergraduate Fellow, until July 2025",
+        "workItems": [
+          "Contributed to various research projects as well as an industrial project",
+          {
+            "title": "Developed tools for:",
+            "items": [
+              "Text extraction from PDF files.",
+              "Bibliographic analysis on .bib files.",
+              "Geographic data visualization on a live map platform."
+            ],
+            "note": "This work was conducted using Java, PDFBox, ReactJS, MaterialUI, and ArcGIS in the context of a research project for FAO (Food and Agriculture Organization of the United Nations), running from November 2023 to September 2024."
+          },
+          "Researched the impact of Knowledge Graphs and Large Language Models (LLMs) on Retrieval-Augmented Generation (RAG) systems.",
+          "And more..."
+        ]
+      }
+    ]
+  },
+  "softwareProjects": {
+    "researchProfessional": [
+      {
+        "date": "February 2026",
+        "title": "Dancing Group \"Alios\" Webpage",
+        "institution": "Dancing Group ”Alios” (Freelance Work)",
+        "description": "Designed and implemented the webpage of the Dancing Group ”Alios” Corfu using HTML, CSS, and JavaScript by utilizing AI tools. Accessible via www.alios-corfu.com"
+      },
+      {
+        "date": "July 2024 - Sept 2024",
+        "title": "FAO Restoration Analysis: GIS",
+        "institution": "FORTH, Food and Agriculture Organization (FAO-UN)",
+        "description": "Designed and implemented a Geographical Information System (GIS) platform as an extension of the work \"Analysis of the 'focus' and 'sentiment' of restoration interventions in the aquatic domain\" which takes as input a data file (.mra file) from the tool presented in the paper and shows its contents on a live map. Implemented using ReactJS, MaterialUI and ArcGis."
+      },
+      {
+        "date": "July 2023 - Jan 2024",
+        "title": "EKT WorkFun+",
+        "institution": "FORTH, National Documentation and Electronic Content Centre of Greece (EKT)",
+        "description": "Designed and implemented a statistics component with data visualization (bars, pies) using ReactJS and MaterialUI. Developed a barcode generation service using Java for PDF outputs."
+      }
+    ],
+    "courseProjects": {
+      "note": "All course codes are from the University of Crete",
+      "entries": [
+        {
+          "date": "Apr 2025 - May 2025",
+          "title": "Analysis, Design, Implementation and Evaluation of an E-Sports Platform",
+          "institution": "CS351: Information Systems Analysis and Design",
+          "description": "Analyzed and designed a platform for hosting E-Sports events and their content, as a CS351: Information Systems Analysis and Design course project. The platform was partially - as requested - implemented, and fully evaluated. The implementation was made using React-TS, Docker, HTML5/CSS, and Material-UI. The evaluation was made using W3 Validator, Wave, Lighthouse and Heuristics."
+        },
+        {
+          "date": "Apr 2025 - May 2025",
+          "title": "Information Retrieval System (IRS)",
+          "institution": "CS463: Information Retrieval Systems",
+          "description": "Implemented an information retrieval system that can index and answer queries on a corpus of 2.5GB consisting of medical research articles, as a CS463: Information Retrieval Systems course team project. The system was also evaluated using various metrics. The implementation was made using Java and Python."
+        },
+        {
+          "date": "Dec 2024 - Jan 2025",
+          "title": "E199",
+          "institution": "CS359: Web Development",
+          "description": "Created a web platform for the Fire Department allowing incident submission & management, user sessions, communication, and more, using HTML, CSS, JavaScript, OpenLayers Maps, Bootstrap, JQuery, and other libraries as a CS359: Web Development course project."
+        },
+        {
+          "date": "Feb 2024 - Jun 2024",
+          "title": "Alpha Compiler",
+          "institution": "CS340: Languages and Compilers",
+          "description": "Created a compiler for the Alpha programming language using C, Flex, and Bison. The compiler compiled Alpha code to execute on an Alpha Virtual Machine."
+        },
+        {
+          "date": "Apr 2024 - Jun 2024",
+          "title": "Business Plan: Triangle",
+          "institution": "MEM343: Entrepreneurship and Innovation",
+          "description": "Researched, created, and presented the business plan Triangle during a public pitch event. Ranked second place in a competitive evaluation among 15+ other projects."
+        },
+        {
+          "date": "Dec 2023 - Jan 2024",
+          "title": "Vehicle Rental Management System",
+          "institution": "CS360: Files and Databases",
+          "description": "Built a complete rental management system for businesses using Java and SQL. The system supported client registration, vehicle tracking, and payment management."
+        },
+        {
+          "date": "Dec 2022",
+          "title": "Stratego: Ice vs Fire",
+          "institution": "CS252: Object Oriented Programming",
+          "description": "Developed a 2D multiplayer strategy game in Java, featuring various game modes and intuitive user controls."
+        }
+      ]
+    }
+  },
+  "schoolsSeminars": {
+    "entries": [
+      {
+        "date": "26-30 Jan 2025",
+        "subtitle": "INGENIUM Senior Winter School 2026",
+        "title": "Science Meets Industry: Ethical AI Development",
+        "institution": "TUIASI, Iasi, Romania (INGENIUM Program)",
+        "description": "Developed and presented ApolloMed, an AI model designed to provide medical recommendations to healthcare stakeholders, within the Blended Intensive Programme (BIP) on Ethical AI Development. Contributed to the full project dossier, focusing on the system’s design, ethical considerations, and real-world applicability. The project was awarded 1st place among 4 teams in the Ethical AI Development BIP and ranked in the Top 3 among the 12 teams across all three BIPs."
+      },
+      {
+        "date": "21 Oct 2025",
+        "subtitle": "Seminar (Online)",
+        "title": "Gen-AI Skills for Work and Beyond",
+        "institution": "The Tipping Point (with Dialectica)",
+        "description": "Attended a workshop on the practical application of Generative AI (GenAI) tools in modern professional domains, including project management, customer experience, and marketing & sales. Acquired practical guidance on leveraging GenAI for academic tasks and early career development."
+      },
+      {
+        "date": "21 - 25 Jul 2025",
+        "subtitle": "CCI Summer School",
+        "title": "CIDOC CRM Interoperability and Applications",
+        "institution": "Centre for Cultural Information, ISL, ICS-FORTH, Heraklion, Greece",
+        "description": "Attended the Summer School on CIDOC CRM (July 2025, FORTH-ICS, Heraklion, Crete), part of the Digital Humanities programme. Received training on conceptual modeling, interoperability, and applications of the CIDOC CRM ontology. Participated in hands-on sessions on data transformation and knowledge graph construction. Explored the use of CIDOC CRM in cultural heritage documentation and AI-supported workflows."
+      },
+      {
+        "date": "9 - 14 Feb 2025",
+        "subtitle": "INGENIUM Junior Winter School 2025",
+        "title": "From Idea to Disruption: Transforming Visions into Innovations",
+        "institution": "Xamk University, Mikkeli, Finland (INGENIUM Program)",
+        "description": "School on entrepreneurial skills, design thinking, multicultural teamwork, and communication skills by solving real-life stakeholders' challenges and cases. The main project was to solve a real-life case problem provided by the stakeholder and develop and present it as a business idea in a 10-minute pitch."
+      }
+    ]
+  },
+  "volunteering": {
+    "academic": [
+      {
+        "date": "2025",
+        "title": "Researcher's Night",
+        "institution": "26 Sept 2025",
+        "description": "Assistant/Guide at FORTH"
+      },
+      {
+        "date": "2025",
+        "subtitle": "\"Developing Faculty members' Pedagogical Acuity\"",
+        "title": "ToTT 1st International Faculty Development and Higher Education Conference",
+        "institution": "23 May - 25 May 2025",
+        "description": "Tech Support at Computer Science Department, University of Crete"
+      },
+      {
+        "date": "2026, 2025, 2024",
+        "title": "University Open Week for Schools",
+        "institution": "29 Jan - 2 Feb 2024, 3-7 Feb 2025, 2 - 6 Feb 2026",
+        "description": "Assistant/Guide at Computer Science Department, University of Crete"
+      },
+      {
+        "date": "2025, 2024, 2023",
+        "title": "Career Fair UoC",
+        "institution": "Nov 2025, Mar 2023, Apr 2024",
+        "description": "Tech Support at Mathematics and Applied Mathematics Department (2025, 2023), and Chemistry Department (2024), University of Crete"
+      }
+    ],
+    "other": {
+      "note": "Only the most notable ones are listed here.",
+      "entries": [
+        {
+          "date": "2023 - 2025",
+          "title": "Event Organizer: Traditional Dance Performance event",
+          "institution": "August 2023, 2024, 2025",
+          "description": "Fully organized a traditional dance performance event and taught traditional dancing to a group of about 10 students at the central square of Kynopiastes as part of the village's 15th August events"
+        },
+        {
+          "date": "2023 - 2025",
+          "title": "Cultural Intervention Program",
+          "institution": "Nov 2023 - Apr 2024, Nov 2024 - May 2025",
+          "description": "Presented the history of Cretan costumes, dances, and traditions at elementary and primary schools of Heraklion as a presenter of the \"Cultural Intervention\" program by the directorate of Elementary Education of Heraklion."
+        },
+        {
+          "date": "2022 - Present",
+          "title": "Sales Representative",
+          "institution": "July and August of 2022 - 2025",
+          "description": "Promoted the lottery/giveaway, held by the Philarmonic Orchestra of Kynopiastes, face-to-face to stores and people on the street, and sold 100 lottery coupons on average each time."
+        }
+      ]
+    }
+  },
+  "languages": {
+    "entries": [
+      {
+        "name": "Greek",
+        "level": "Native"
+      },
+      {
+        "name": "English",
+        "level": "Proficient (C2, ECPE Certification)"
+      }
+    ]
+  },
+  "hobbies": {
+    "entries": [
+      {
+        "title": "Traditional Greek Dancing",
+        "description": "Teacher, group leader, and performer in national and local shows, with Dancing Group \"Allios\", Lyceum of Greek Women of Heraklion, and more since 2019."
+      },
+      {
+        "title": "Music",
+        "description": "Musician (Percussion) in the Philarmonic Orchestra of Kynopiastes since 2012."
+      },
+      {
+        "title": "Game Dev",
+        "description": "Developed and maintained Minecraft servers since 2016, primarily on Spigot 1.8.8, including serving as lead developer of the top Minecraft server in Greece (over 50 concurrent players) and building and owning servers that reached 30+ concurrent players; selected projects and implementations are available online."
+      },
+      {
+        "title": "Acting",
+        "description": "Actor in the Amateur Theater Group of Kynopiastes Youth, having taken part in more than 9 performances from 2017 to 2023."
+      },
+      {
+        "title": "Traveling",
+        "description": "8 countries up to now, and continuing... Always up to something! :)"
+      }
+    ]
+  },
+  "references": {
+    "entries": [
+      {
+        "name": "Yannis Tzitzikas",
+        "email": "tzitzik@ics.forth.gr",
+        "positions": [
+          "Professor at University of Crete",
+          "Affiliated Researcher at ICS-FORTH",
+          "Deputy Chair at Computer Science Department, University of Crete"
+        ]
+      },
+      {
+        "name": "Kostas Magoutis",
+        "email": "magoutis@ics.forth.gr",
+        "positions": [
+          "Associate Professor at University of Crete",
+          "Collaborating Researcher at ICS-FORTH",
+          "Chair at Computer Science Department, University of Crete"
+        ]
+      },
+      {
+        "name": "Noni Rizopoulou",
+        "email": "nrizop@csd.uoc.gr",
+        "positions": [
+          "Professor at University of Crete"
+        ]
+      },
+      {
+        "name": "Yannis Marketakis",
+        "email": "marketak@ics.forth.gr",
+        "positions": [
+          "Senior Research Engineer and Technical Head of CCI at ICS-FORTH"
+        ]
+      },
+      {
+        "name": "Vangelis Kritsotakis",
+        "email": "vkrits@ics.forth.gr",
+        "positions": [
+          "Software Engineer at ICS-FORTH"
+        ]
+      },
+      {
+        "name": "Dimitris Sampsonidis",
+        "email": "d.sampsonidis@uoc.gr",
+        "positions": [
+          "Career Counsellor at University of Crete",
+          "Co-Founder at Youth Crete (Region's of Crete NGO)"
+        ]
+      }
+    ]
+  },
+  "contact": {
+    "emails": [
+      {
+        "address": "zervosvalantis@gmail.com",
+        "label": "Personal Email"
+      },
+      {
+        "address": "vzervos@csd.uoc.gr",
+        "label": "CSD Email"
+      },
+      {
+        "address": "vzervos@ics.forth.gr",
+        "label": "ICS-FORTH Email"
+      }
+    ],
+    "links": [
+      {
+        "name": "Linked-In",
+        "url": "https://www.linkedin.com/in/vzervos/"
+      },
+      {
+        "name": "GitHub",
+        "url": "https://github.com/VZervos"
+      },
+      {
+        "name": "Google Scholar",
+        "url": "https://scholar.google.com/citations?user=NiPG7QIAAAAJ"
+      }
+    ]
+  }
+}
+
