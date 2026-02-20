@@ -17,7 +17,7 @@
   "shortBio": {
     "paragraphs": [
       "I am currently a postgraduate student at the Computer Science Department of the University of Crete (CSD, UoC), which has been ranked first in Greece in Informatics/Computer Science for 2025. I hold a BSc from the same department with a grade of 9.57/10, ranking second among my year's admission 40 graduate students (179 still active as of Jan 2026).",
-      "Since my second year of undergraduate studies, I have been an undergraduate scholar at FORTH-ICS. I have worked on the technological upgrade of the openABEKT system, commissioned by the National Documentation and Electronic Content Centre of Greece (EKT). Over the past two years, I have conducted research on both national and international research projects at the Information Systems Laboratory (ISL) of ICS-FORTH. Currently, I am a graduate researcher working on the research projects of the laboratory as well as on my master's thesis. Up to now, I have published three (3) research papers and one (1) technical report.",
+      "Since my second year of undergraduate studies, I have been an undergraduate scholar at FORTH-ICS. I have worked on the technological upgrade of the openABEKT system, commissioned by the National Documentation and Electronic Content Centre of Greece (EKT). Over the past two years, I have conducted research on both national and international research projects at the Information Systems Laboratory (ISL) of ICS-FORTH. Currently, I am a graduate researcher working on the research projects of the laboratory as well as on my master's thesis. Up to now, I have published three (3) research papers, one (1) workshop paper, and one (1) technical report.",
       "I have been awarded three (3) scholarships, along with four (4) other distinctions and awards, and I have been ranked in the Top-5 in three (3) contests, as well as ranking 8th nationwide for the HIAS scholarship (2024) and placing in the top 13% of applicants for EPFL worldwide (2025). Additionally, I held a distinguished Undergraduate Teaching Assistant position in my department, and nowadays, I am a member of the INGENIUM Student Board, representative of the University of Crete.",
       "My primary research interests include Web and Semantic Data Management, Natural Language Processing (NLP), full-stack programming, and the integration of these fields with Large Language Models (LLMs)."
     ]
@@ -109,6 +109,13 @@
   },
   "publications": {
     "byYear": {
+      "2026": [
+        {
+          "authors": "Valantis Zervos, Spyridon Doukeris, Kiki Miniadou, Giannis Vassiliou, Sophia Sideri and Haridimos Kondylakis",
+          "title": "GSS: Graph Semantic Summarization using answer-centered explanatory subgraphs",
+          "status": "Accepted at TGD Workshop - EDBT 2026"
+        }
+      ],
       "2025": [
         {
           "authors": "Sophia Sideri, Emmanouil Patronakis, Evangelos Nikiforos, Isidoros Chatzichrysos, Apostolos Baniotis, Valantis Zervos, Stavros Tzormpatzakis, Michalis Saridakis, Iosif Oikonomakis, Michalis Mountantonakis, Pavlos Fafalios and Yannis Tzitzikas",

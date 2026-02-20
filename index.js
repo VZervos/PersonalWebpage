@@ -31,8 +31,6 @@ const initializePage = () => {
         document.body.classList.add('loaded');
     }, 500);
     
-    console.log('🚀 Enhanced Personal Webpage loaded successfully!');
-    
     // Announce page load for screen readers
     const announcement = document.createElement('div');
     announcement.setAttribute('aria-live', 'polite');
