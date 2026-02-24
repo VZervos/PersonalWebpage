@@ -100,7 +100,7 @@
         "description": "Designed and implemented an AI Mentor platform in 24 hours during the FuturED AI Hackathon. The Mentor could provide assistance and suggestions to the user for academic issues based on their preferences, ranging from structured options like professors and topics, to unstructured free text, based to the department schedule and study guide. The frontend was implemented in ReactJS and MaterialUI, the backend was a RAG implementation in JavaScript, the communication was based upon services architecture, and the text from the department documents was extracted using AI methods. The project was ranked as 5th out of the 16 projects presented, with a near-tie for 4th place."
       },
       {
-        "date": "18 June 2024",
+        "date": "Feb - June 2024",
         "title": "2nd place, Triangle (MEM-343: Entrepreneurship and Innovation course)",
         "institution": "Department of Mathematics and Applied Mathematics, University of Crete",
         "description": "The business idea Triangle got second place in the open-to-the-public business idea presentation event in the context of the Innovation and Entrepreneurship course. The business ideas presented were evaluated by a five-member jury, with Triangle taking – in a tie – 2nd place among 15+ other projects."
