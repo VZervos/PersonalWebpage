@@ -175,7 +175,7 @@ def generate_publications(data):
             if 'status2' in pub:
                 html += f'\n                            <div class="status-to_submit">\n                                {escape_html(pub["status2"])}\n                            </div>'
             if has_link and 'status' not in pub:
-                html += '\n                            <i class="fa-solid fa-arrow-up-right-from-square"></i>'
+                html += f'\n                            <a target="_blank" rel="noopener noreferrer" href="{escape_html(pub["url"])}">\n                                <i class="fa-solid fa-arrow-up-right-from-square"></i>\n                            </a>'
             html += '\n                        </div>\n                    </div>'
         html += '\n                </div>'
     
@@ -367,7 +367,7 @@ def generate_schools_seminars(data):
         <div class="row">
             <div class="section-content col-12 col-md">
                 <div>
-                    <h2><i class="fa-solid fa-school"></i> Schools</h2>
+                    <h2><i class="fa-solid fa-school"></i> Schools, Seminars, Workshops</h2>
 {entries_html}
                 </div>
             </div>
@@ -673,7 +673,7 @@ def generate_index_html(data):
                 </a>
                 <a class="nav-link nav-item" href="#schoolsseminars" data-section="schoolsseminars">
                     <i class="fa-solid fa-school"></i>
-                    <span class="nav-text">Schools & Seminars</span>
+                    <span class="nav-text">Schools, Seminars, Workshops</span>
                     <div class="nav-indicator"></div>
                 </a>
                 <a class="nav-link nav-item" href="#volunteering" data-section="volunteering">
