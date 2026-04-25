@@ -16,10 +16,11 @@
   },
   "shortBio": {
     "paragraphs": [
-      "I am currently a postgraduate student at the Computer Science Department of the University of Crete (CSD, UoC), which has been ranked first in Greece in Informatics/Computer Science for 2025. I hold a BSc from the same department with a grade of 9.57/10, ranking second among my year's admission 40 graduate students (179 still active as of Jan 2026).",
-      "Since my second year of undergraduate studies, I have been an undergraduate scholar at FORTH-ICS. I have worked on the technological upgrade of the openABEKT system, commissioned by the National Documentation and Electronic Content Centre of Greece (EKT). Over the past two years, I have conducted research on both national and international research projects at the Information Systems Laboratory (ISL) of ICS-FORTH. Currently, I am a graduate researcher working on the research projects of the laboratory as well as on my master's thesis. Up to now, I have published three (3) research papers, one (1) workshop paper, and one (1) technical report.",
-      "I have been awarded three (3) scholarships, along with four (4) other distinctions and awards, and I have been ranked in the Top-5 in three (3) contests, as well as ranking 8th nationwide for the HIAS scholarship (2024) and placing in the top 13% of applicants for EPFL worldwide (2025). Additionally, I held a distinguished Undergraduate Teaching Assistant position in my department, and nowadays, I am a member of the INGENIUM Student Board, representative of the University of Crete.",
-      "My primary research interests include Web and Semantic Data Management, \full-stack programming, and the integration of these fields with Large Language Models (LLMs)."
+      "I am currently a postgraduate student at the Computer Science Department of the University of Crete (CSD, UoC), which is ranked first in Greece in Informatics and Computer Science. I hold a BSc from the same department (GPA: 9.57/10), graduating second in my cohort.",
+      "Since my second year of undergraduate studies, I have been a scholar at FORTH-ICS, contributing to research and industrial projects in collaboration with institutions such as the National Documentation and Electronic Content Centre of Greece (EKT), Huawei, and the Food and Agriculture Organization (FAO) of the United Nations. My work spans system development and research within the Information Systems Laboratory (ISL) at FORTH-ICS and the Computer Science Department of the University of Crete. I am currently a graduate researcher, working on ongoing projects alongside my master's thesis.",
+      "I have authored three research papers, one workshop paper, and one technical report, with publications appearing in venues such as TPDL, IJCKG, and the TGD Workshop at EDBT, along with an additional submission to HAICTA. I have received three scholarships, including national-level distinctions, and multiple academic awards. I have also achieved top rankings in academic competitions, including first place at the INGENIUM Senior Winter School (project: ApolloMed), second place in an entrepreneurship competition at the University of Crete (project: Triangle), and a top-five finish at the FuturEd AI Hackathon (project: MentorMind).",
+      "I have served as a Distinguished Undergraduate Teaching Assistant at the University of Crete and am currently a member of the INGENIUM Student Board, representing the University of Crete.",
+      "My research interests include Web and Semantic Data Management, Knowledge Graphs, full-stack systems, and their integration with Large Language Models (LLMs)."
     ]
   },
   "education": {
@@ -27,6 +28,7 @@
       {
         "title": "MSc Candidate (2025-Present)",
         "school": "Computer Science Department, University of Crete (CSD, UoC)",
+        "note": "Field of study: Databases, information and knowledge management",
         "logo": "resources/logos/csd.jpg"
       },
       {
@@ -101,14 +103,14 @@
         "date": "26-30 January 2026",
         "title": "1st Place, ApolloMed (INGENIUM Senior Winter School 2026)",
         "institution": "TUIASI, Romania",
-        "description": "Developed and presented ApolloMed, an AI model designed to provide medical recommendations to healthcare stakeholders, within the Blended Intensive Programme (BIP) on Ethical AI Development. Contributed to the full project dossier, focusing on the system’s design, ethical considerations, and real-world applicability. The project was awarded 1st place among 4 teams in the Ethical AI Development BIP and ranked in the Top 3 among the 12 teams across all three BIPs. The school was finished with a final grade of 10/10.",
+        "description": "Developed an AI system for medical recommendations with a focus on ethical design. Ranked 1st in the Ethical AI BIP and top 3 overall among 12 teams.",
         "logo": "resources/logos/tuiasi.png"
       },
       {
         "date": "2-3 October 2025",
         "title": "5th Place, MentorMind (FuturEd AI Hackathon)",
         "institution": "Computer Science Department, University of Crete",
-        "description": "Designed and implemented an AI Mentor platform in 24 hours during the FuturED AI Hackathon. The Mentor could provide assistance and suggestions to the user for academic issues based on their preferences, ranging from structured options like professors and topics, to unstructured free text, based to the department schedule and study guide. The frontend was implemented in ReactJS and MaterialUI, the backend was a RAG implementation in JavaScript, the communication was based upon services architecture, and the text from the department documents was extracted using AI methods. The project was ranked as 5th out of the 16 projects presented, with a near-tie for 4th place.",
+        "description": "Built a RAG-based AI academic assistant in 24 hours using LLMs and knowledge retrieval techniques. Ranked 5th among 15 teams.",
         "logo": "resources/logos/futured.png"
       },
       {
@@ -165,15 +167,16 @@
         "date": "Nov 2025 - Present",
         "title": "Member of the INGENIUM Student Board",
         "institution": "Representative of the University of Crete",
-        "description": "Work with the other student representatives chosen from INGENIUM universities on discussing regulations, projects, and other activities involving students and the partner universities.",
+        "description": "Collaborate with student representatives from partner universities to contribute to initiatives, policies, and activities related to student engagement and academic collaboration across the INGENIUM network.",
         "logo": "resources/logos/ingenium.png"
       },
       {
         "date": "Oct 2023 - Present",
         "title": "University Teaching Assistant",
         "institution": "Computer Science Department, University of Crete, Heraklion, Greece",
-        "description": "Responsibilities: Corrected and designed assignments, conducted office hours, presented tutorials, organized and managed course (along with Professor), and course platforms for the courses:",
+        "description": "Supported the delivery of undergraduate courses through assignment design and grading, tutorials, and student mentoring. Contributed to course organization and coordination for large classes (200-350+ students), primarily in programming and academic communication courses.",
         "courses": [
+          "CS463: Information Retrieval Systems (Spring 2026) [~90 students]",
           "CS252: Object-Oriented Programming (Fall 2023, 2024, 2025) [∼360 students]",
           "CS109: English II (Spring 2024, 2025) [∼200 students]",
           "CS209: English IV (Spring 2024, 2025) [∼220 students]"
@@ -184,21 +187,7 @@
         "date": "July 2023 - Present",
         "title": "Graduate Researcher at FORTH",
         "institution": "FORTH-Institute of Computer Science, Heraklion, Greece",
-        "description": "Previously: Undergraduate Fellow, until July 2025",
-        "workItems": [
-          "Contributed to various research projects as well as an industrial project",
-          {
-            "title": "Developed tools for:",
-            "items": [
-              "Text extraction from PDF files.",
-              "Bibliographic analysis on .bib files.",
-              "Geographic data visualization on a live map platform."
-            ],
-            "note": "This work was conducted using Java, PDFBox, ReactJS, MaterialUI, and ArcGIS in the context of a research project for FAO (Food and Agriculture Organization of the United Nations), running from November 2023 to September 2024."
-          },
-          "Researched the impact of Knowledge Graphs and Large Language Models (LLMs) on Retrieval-Augmented Generation (RAG) systems.",
-          "And more..."
-        ],
+        "description": "Conduct research and development in the areas of Knowledge Graphs, Web and Semantic Data Management, and Large Language Models. Design and implement systems for data processing, information extraction, and knowledge-driven applications, with a focus on integrating structured data with modern AI methods. Some projects also included full-stack development. Previously: Undergraduate Research Fellow.",
         "logo": "resources/logos/isl.png"
       }
     ]
@@ -209,7 +198,7 @@
         "date": "February 2026",
         "title": "Dancing Group \"Alios\" Webpage",
         "institution": "Dancing Group ”Alios” (Freelance Work)",
-        "description": "Designed and implemented the webpage of the Dancing Group ”Alios” Corfu using HTML, CSS, and JavaScript by utilizing AI tools. Accessible via www.alios-corfu.com",
+        "description": "Designed and implemented the webpage of the Dancing Group \"Alios\" Corfu using HTML, CSS, and JavaScript by utilizing AI tools. Accessible via www.alios-corfu.com",
         "logo": "resources/logos/alios.png"
       },
       {
@@ -282,7 +271,7 @@
         "subtitle": "Invited Workshop in the context of CS-209: English IV",
         "title": "\"How To Present\" Workshop",
         "institution": "31 March 2026, CSD, UoC, Greece",
-        "description": "Designed and delivered a workshop on presentation skills for undergraduate students, covering both fundamental and advanced techniques including effective slide design, delivery strategies, and audience engagement, complemented by live demonstrations and interactive discussion. The workshop was attended by approximately 25 students. Post-session feedback (n=6) yielded an overall score of 4.5/5, while 100% of respondents found the material useful and expressed interest in future sessions.",
+        "description": "Designed and delivered a workshop on presentation skills for undergraduate students, covering slide design, delivery techniques, and audience engagement through interactive sessions and live demonstrations. Attended by ~25 students and received positive feedback (4.5/5 average).",
         "logo": "resources/logos/csd.jpg"
       },
       {
@@ -290,7 +279,7 @@
         "subtitle": "INGENIUM Senior Winter School 2026",
         "title": "Science Meets Industry: Ethical AI Development",
         "institution": "TUIASI, Iasi, Romania (INGENIUM Program)",
-        "description": "Developed and presented ApolloMed, an AI model designed to provide medical recommendations to healthcare stakeholders, within the Blended Intensive Programme (BIP) on Ethical AI Development. Contributed to the full project dossier, focusing on the system’s design, ethical considerations, and real-world applicability. The project was awarded 1st place among 4 teams in the Ethical AI Development BIP and ranked in the Top 3 among the 12 teams across all three BIPs.",
+        "description": "Participated in an intensive programme on Ethical AI Development, focusing on the design, evaluation, and societal impact of AI systems. Developed and presented an AI system for medical recommendations within a multidisciplinary team. Project ranked 1st in the Ethical AI programme and top 3 overall.",
         "logo": "resources/logos/tuiasi.png"
       },
       {
@@ -298,7 +287,7 @@
         "subtitle": "Seminar (Online)",
         "title": "Gen-AI Skills for Work and Beyond",
         "institution": "The Tipping Point (with Dialectica)",
-        "description": "Attended a workshop on the practical application of Generative AI (GenAI) tools in modern professional domains, including project management, customer experience, and marketing & sales. Acquired practical guidance on leveraging GenAI for academic tasks and early career development.",
+        "description": "Gained practical experience in applying Generative AI tools to domains such as project management, customer experience, and early career development.",
         "logo": "resources/logos/thetippingpoint.png"
       },
       {
@@ -306,7 +295,7 @@
         "subtitle": "CCI Summer School",
         "title": "CIDOC CRM Interoperability and Applications",
         "institution": "Centre for Cultural Information, ISL, ICS-FORTH, Heraklion, Greece",
-        "description": "Attended the Summer School on CIDOC CRM (July 2025, FORTH-ICS, Heraklion, Crete), part of the Digital Humanities programme. Received training on conceptual modeling, interoperability, and applications of the CIDOC CRM ontology. Participated in hands-on sessions on data transformation and knowledge graph construction. Explored the use of CIDOC CRM in cultural heritage documentation and AI-supported workflows.",
+        "description": "Trained in conceptual modeling, interoperability, and knowledge graph construction using CIDOC CRM, with applications in cultural heritage and digital humanities.",
         "logo": "resources/logos/isl.png"
       },
       {
@@ -314,7 +303,7 @@
         "subtitle": "INGENIUM Junior Winter School 2025",
         "title": "From Idea to Disruption: Transforming Visions into Innovations",
         "institution": "Xamk University, Mikkeli, Finland (INGENIUM Program)",
-        "description": "School on entrepreneurial skills, design thinking, multicultural teamwork, and communication skills by solving real-life stakeholders' challenges and cases. The main project was to solve a real-life case problem provided by the stakeholder and develop and present it as a business idea in a 10-minute pitch.",
+        "description": "Collaborated in a multidisciplinary team to develop and pitch a business solution to a real-world stakeholder problem, focusing on design thinking and communication.",
         "logo": "resources/logos/xamk.png"
       }
     ]

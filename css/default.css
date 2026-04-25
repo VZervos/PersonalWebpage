@@ -1163,6 +1163,24 @@ header .social-icon img {
     margin-top: 0.1rem;
 }
 
+/* Entry base color refinements */
+.left-col,
+.date {
+    color: #1e3a8a;
+}
+
+.title {
+    color: #1d4ed8;
+}
+
+.institution {
+    color: #4b5563;
+}
+
+.details {
+    color: #111827;
+}
+
 .status-accepted {
     color: #ffffff;
     font-weight: 600;
