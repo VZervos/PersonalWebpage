@@ -62,6 +62,18 @@ Add to the appropriate year in `publications.byYear`:
 }
 ```
 
+### Adding an Optional Entry Logo
+Most entry objects can include an optional `logo` path (relative to project root):
+```json
+{
+  "title": "BSc (2021-2025)",
+  "school": "Computer Science Department, University of Crete (CSD, UoC)",
+  "logo": "resources/uoc-logo.png"
+}
+```
+Optional field:
+- `logoAlt`: Custom alt text for the logo image
+
 ## Tips
 
 - Use `**Valantis Zervos**` in author lists to automatically bold your name

@@ -19,25 +19,28 @@
       "I am currently a postgraduate student at the Computer Science Department of the University of Crete (CSD, UoC), which has been ranked first in Greece in Informatics/Computer Science for 2025. I hold a BSc from the same department with a grade of 9.57/10, ranking second among my year's admission 40 graduate students (179 still active as of Jan 2026).",
       "Since my second year of undergraduate studies, I have been an undergraduate scholar at FORTH-ICS. I have worked on the technological upgrade of the openABEKT system, commissioned by the National Documentation and Electronic Content Centre of Greece (EKT). Over the past two years, I have conducted research on both national and international research projects at the Information Systems Laboratory (ISL) of ICS-FORTH. Currently, I am a graduate researcher working on the research projects of the laboratory as well as on my master's thesis. Up to now, I have published three (3) research papers, one (1) workshop paper, and one (1) technical report.",
       "I have been awarded three (3) scholarships, along with four (4) other distinctions and awards, and I have been ranked in the Top-5 in three (3) contests, as well as ranking 8th nationwide for the HIAS scholarship (2024) and placing in the top 13% of applicants for EPFL worldwide (2025). Additionally, I held a distinguished Undergraduate Teaching Assistant position in my department, and nowadays, I am a member of the INGENIUM Student Board, representative of the University of Crete.",
-      "My primary research interests include Web and Semantic Data Management, full-stack programming, and the integration of these fields with Large Language Models (LLMs)."
+      "My primary research interests include Web and Semantic Data Management, \full-stack programming, and the integration of these fields with Large Language Models (LLMs)."
     ]
   },
   "education": {
     "entries": [
       {
         "title": "MSc Candidate (2025-Present)",
-        "school": "Computer Science Department, University of Crete (CSD, UoC)"
+        "school": "Computer Science Department, University of Crete (CSD, UoC)",
+        "logo": "resources/logos/csd.jpg"
       },
       {
         "title": "BSc (2021–2025)",
         "school": "Computer Science Department, University of Crete (CSD, UoC)",
         "grade": "Grade: 9.57/10 (Ranked second)",
-        "note": "Ranked 2nd among 74 graduates (July 2025)\nRanked 2nd in the 2021-2022 admission cohort (40 graduates out of 179 admitted and still active as of Jan 2026)."
+        "note": "Ranked 2nd among 74 graduates (July 2025)\nRanked 2nd in the 2021-2022 admission cohort (40 graduates out of 179 admitted and still active as of Jan 2026).",
+        "logo": "resources/logos/csd.jpg"
       },
       {
         "title": "High School Diploma \"Apolytirio\" (2018-2021)",
         "school": "General High School of Kastellanoi Messis Kerkyras",
-        "grade": "Grade: 19.6/20"
+        "grade": "Grade: 19.6/20",
+        "logo": "resources/logos/kastellanoi.png"
       }
     ]
   },
@@ -47,63 +50,73 @@
         "date": "November 2025",
         "title": "\"Evangelos Kastamonitis\" Postgraduate Scholarship",
         "institution": "Rotary Club Corfu",
-        "description": "Scholarship awarded by Rotary Club Corfu to one Corfiot postgraduate student based on their academic performance, economic situation, and activity. It lasts until graduation if the student maintains their performance. This was the very first postgraduate scholarship to be offered by the Rotary Club of Corfu."
+        "description": "Scholarship awarded by Rotary Club Corfu to one Corfiot postgraduate student based on their academic performance, economic situation, and activity. It lasts until graduation if the student maintains their performance. This was the very first postgraduate scholarship to be offered by the Rotary Club of Corfu.",
+        "logo": "resources/logos/rotarycorfu.png"
       },
       {
         "date": "July 2025",
         "title": "Ranked second among my year's admission students, \"Elisabeth Karamitzou\" Award",
         "institution": "University of Crete (UoC)",
-        "description": "An annual award given to the top three students of each department of the University of Crete who completed their studies within the prescribed period of study, and based on their grades. I was ranked second among my year's admission students with a grade of 9.57/10."
+        "description": "An annual award given to the top three students of each department of the University of Crete who completed their studies within the prescribed period of study, and based on their grades. I was ranked second among my year's admission students with a grade of 9.57/10.",
+        "logo": "resources/logos/uoc.png"
       },
       {
         "date": "January 2025",
         "title": "Top 13%, Summer@EPFL Internship Program",
         "institution": "Ecole Polytechnique Federale de Lausanne (EPFL)",
-        "description": "I was shortlisted and ranked among the top 13% of all 5900 applicants worldwide in the Summer@EPFL Internship Program of the Ecole Polytechnique Federale de Lausanne, based on academic performance and curriculum vitae (CV). (Final selection not awarded.)"
+        "description": "I was shortlisted and ranked among the top 13% of all 5900 applicants worldwide in the Summer@EPFL Internship Program of the Ecole Polytechnique Federale de Lausanne, based on academic performance and curriculum vitae (CV). (Final selection not awarded.)",
+        "logo": "resources/logos/epfl.png"
       },
       {
         "date": "September 2025, 2024",
         "title": "DEPROFOIT Distinction",
         "institution": "Computer Science Department, University of Crete",
-        "description": "Praise awarded by the Department of Computer Science, University of Crete for successfully taking on a teaching assistantship during the academic year. The related courses were CS252: Object-Oriented Programming, CS109: English II, and CS209: English IV for both awards."
+        "description": "Praise awarded by the Department of Computer Science, University of Crete for successfully taking on a teaching assistantship during the academic year. The related courses were CS252: Object-Oriented Programming, CS109: English II, and CS209: English IV for both awards.",
+        "logo": "resources/logos/csd.jpg"
       },
       {
         "date": "March 2024",
         "title": "Eighth place, Nicholas and Robert Askounes Ashford Educational Scholarship",
         "institution": "Hellenic Institute of Advanced Studies (HIAS)",
-        "description": "I was ranked 8th in Greece in the Nicholas and Robert Askounes Ashford Educational Scholarship of the Hellenic Institute of Advanced Studies, based on academic performance and research proposal (final selection not awarded)."
+        "description": "I was ranked 8th in Greece in the Nicholas and Robert Askounes Ashford Educational Scholarship of the Hellenic Institute of Advanced Studies, based on academic performance and research proposal (final selection not awarded).",
+        "logo": "resources/logos/hias.png"
       },
       {
         "date": "November 2023",
         "title": "\"Evangelos Kastamonitis\" Undergraduate Scholarship",
         "institution": "Rotary Club Corfu",
-        "description": "Scholarship awarded by Rotary Club Corfu to one Corfiot undergraduate student based on their academic performance, economic situation, and activity. Lasts until graduation if the student maintains their performance."
+        "description": "Scholarship awarded by Rotary Club Corfu to one Corfiot undergraduate student based on their academic performance, economic situation, and activity. Lasts until graduation if the student maintains their performance.",
+        "logo": "resources/logos/rotarycorfu.png"
       },
       {
         "date": "July 2023",
         "title": "FORTH Undergraduate Student Scholarship",
         "institution": "Institute of Computer Science (ICS), Foundation for Research and Technology - Hellas (FORTH)",
-        "description": "Scholarship awarded by the Information Systems Laboratory (ISL), FORTH to undergraduate students of the lab. Lasts while the student is active and productive on ISL and until graduation."
+        "description": "Scholarship awarded by the Information Systems Laboratory (ISL), FORTH to undergraduate students of the lab. Lasts while the student is active and productive on ISL and until graduation.",
+        "logo": "resources/logos/forth.png"
       }
     ],
     "contests": [
       {
         "date": "26-30 January 2026",
-        "title": "1st Place, ApolloMed (INGENIUM Senior Winter School 2026",
+        "title": "1st Place, ApolloMed (INGENIUM Senior Winter School 2026)",
         "institution": "TUIASI, Romania",
-        "description": "Developed and presented ApolloMed, an AI model designed to provide medical recommendations to healthcare stakeholders, within the Blended Intensive Programme (BIP) on Ethical AI Development. Contributed to the full project dossier, focusing on the system’s design, ethical considerations, and real-world applicability. The project was awarded 1st place among 4 teams in the Ethical AI Development BIP and ranked in the Top 3 among the 12 teams across all three BIPs. The school was finished with a final grade of 10/10."
+        "description": "Developed and presented ApolloMed, an AI model designed to provide medical recommendations to healthcare stakeholders, within the Blended Intensive Programme (BIP) on Ethical AI Development. Contributed to the full project dossier, focusing on the system’s design, ethical considerations, and real-world applicability. The project was awarded 1st place among 4 teams in the Ethical AI Development BIP and ranked in the Top 3 among the 12 teams across all three BIPs. The school was finished with a final grade of 10/10.",
+        "logo": "resources/logos/tuiasi.png"
       },
       {
         "date": "2-3 October 2025",
         "title": "5th Place, MentorMind (FuturEd AI Hackathon)",
         "institution": "Computer Science Department, University of Crete",
-        "description": "Designed and implemented an AI Mentor platform in 24 hours during the FuturED AI Hackathon. The Mentor could provide assistance and suggestions to the user for academic issues based on their preferences, ranging from structured options like professors and topics, to unstructured free text, based to the department schedule and study guide. The frontend was implemented in ReactJS and MaterialUI, the backend was a RAG implementation in JavaScript, the communication was based upon services architecture, and the text from the department documents was extracted using AI methods. The project was ranked as 5th out of the 16 projects presented, with a near-tie for 4th place."
+        "description": "Designed and implemented an AI Mentor platform in 24 hours during the FuturED AI Hackathon. The Mentor could provide assistance and suggestions to the user for academic issues based on their preferences, ranging from structured options like professors and topics, to unstructured free text, based to the department schedule and study guide. The frontend was implemented in ReactJS and MaterialUI, the backend was a RAG implementation in JavaScript, the communication was based upon services architecture, and the text from the department documents was extracted using AI methods. The project was ranked as 5th out of the 16 projects presented, with a near-tie for 4th place.",
+        "logo": "resources/logos/futured.png"
       },
       {
         "date": "Feb - June 2024",
         "title": "2nd place, Triangle (MEM-343: Entrepreneurship and Innovation course)",
         "institution": "Department of Mathematics and Applied Mathematics, University of Crete",
-        "description": "The business idea Triangle got second place in the open-to-the-public business idea presentation event in the context of the Innovation and Entrepreneurship course. The business ideas presented were evaluated by a five-member jury, with Triangle taking – in a tie – 2nd place among 15+ other projects."
+        "description": "The business idea Triangle got second place in the open-to-the-public business idea presentation event in the context of the Innovation and Entrepreneurship course. The business ideas presented were evaluated by a five-member jury, with Triangle taking – in a tie – 2nd place among 15+ other projects.",
+        "logo": "resources/logos/uoc.png"
       }
     ]
   },
@@ -152,7 +165,8 @@
         "date": "Nov 2025 - Present",
         "title": "Member of the INGENIUM Student Board",
         "institution": "Representative of the University of Crete",
-        "description": "Work with the other student representatives chosen from INGENIUM universities on discussing regulations, projects, and other activities involving students and the partner universities."
+        "description": "Work with the other student representatives chosen from INGENIUM universities on discussing regulations, projects, and other activities involving students and the partner universities.",
+        "logo": "resources/logos/ingenium.png"
       },
       {
         "date": "Oct 2023 - Present",
@@ -163,7 +177,8 @@
           "CS252: Object-Oriented Programming (Fall 2023, 2024, 2025) [∼360 students]",
           "CS109: English II (Spring 2024, 2025) [∼200 students]",
           "CS209: English IV (Spring 2024, 2025) [∼220 students]"
-        ]
+        ],
+        "logo": "resources/logos/csd.jpg"
       },
       {
         "date": "July 2023 - Present",
@@ -183,7 +198,8 @@
           },
           "Researched the impact of Knowledge Graphs and Large Language Models (LLMs) on Retrieval-Augmented Generation (RAG) systems.",
           "And more..."
-        ]
+        ],
+        "logo": "resources/logos/isl.png"
       }
     ]
   },
@@ -193,19 +209,22 @@
         "date": "February 2026",
         "title": "Dancing Group \"Alios\" Webpage",
         "institution": "Dancing Group ”Alios” (Freelance Work)",
-        "description": "Designed and implemented the webpage of the Dancing Group ”Alios” Corfu using HTML, CSS, and JavaScript by utilizing AI tools. Accessible via www.alios-corfu.com"
+        "description": "Designed and implemented the webpage of the Dancing Group ”Alios” Corfu using HTML, CSS, and JavaScript by utilizing AI tools. Accessible via www.alios-corfu.com",
+        "logo": "resources/logos/alios.png"
       },
       {
         "date": "July 2024 - Sept 2024",
         "title": "FAO Restoration Analysis: GIS",
         "institution": "FORTH, Food and Agriculture Organization (FAO-UN)",
-        "description": "Designed and implemented a Geographical Information System (GIS) platform as an extension of the work \"Analysis of the 'focus' and 'sentiment' of restoration interventions in the aquatic domain\" which takes as input a data file (.mra file) from the tool presented in the paper and shows its contents on a live map. Implemented using ReactJS, MaterialUI and ArcGis."
+        "description": "Designed and implemented a Geographical Information System (GIS) platform as an extension of the work \"Analysis of the 'focus' and 'sentiment' of restoration interventions in the aquatic domain\" which takes as input a data file (.mra file) from the tool presented in the paper and shows its contents on a live map. Implemented using ReactJS, MaterialUI and ArcGis.",
+        "logo": "resources/logos/fao.png"
       },
       {
         "date": "July 2023 - Jan 2024",
         "title": "EKT WorkFun+",
         "institution": "FORTH, National Documentation and Electronic Content Centre of Greece (EKT)",
-        "description": "Designed and implemented a statistics component with data visualization (bars, pies) using ReactJS and MaterialUI. Developed a barcode generation service using Java for PDF outputs."
+        "description": "Designed and implemented a statistics component with data visualization (bars, pies) using ReactJS and MaterialUI. Developed a barcode generation service using Java for PDF outputs.",
+        "logo": "resources/logos/ekt.png"
       }
     ],
     "courseProjects": {
@@ -263,35 +282,40 @@
         "subtitle": "Invited Workshop in the context of CS-209: English IV",
         "title": "\"How To Present\" Workshop",
         "institution": "31 March 2026, CSD, UoC, Greece",
-        "description": "Designed and delivered a workshop on presentation skills for undergraduate students, covering both fundamental and advanced techniques including effective slide design, delivery strategies, and audience engagement, complemented by live demonstrations and interactive discussion. The workshop was attended by approximately 25 students. Post-session feedback (n=6) yielded an overall score of 4.5/5, while 100% of respondents found the material useful and expressed interest in future sessions."
+        "description": "Designed and delivered a workshop on presentation skills for undergraduate students, covering both fundamental and advanced techniques including effective slide design, delivery strategies, and audience engagement, complemented by live demonstrations and interactive discussion. The workshop was attended by approximately 25 students. Post-session feedback (n=6) yielded an overall score of 4.5/5, while 100% of respondents found the material useful and expressed interest in future sessions.",
+        "logo": "resources/logos/csd.jpg"
       },
       {
         "date": "26-30 Jan 2026",
         "subtitle": "INGENIUM Senior Winter School 2026",
         "title": "Science Meets Industry: Ethical AI Development",
         "institution": "TUIASI, Iasi, Romania (INGENIUM Program)",
-        "description": "Developed and presented ApolloMed, an AI model designed to provide medical recommendations to healthcare stakeholders, within the Blended Intensive Programme (BIP) on Ethical AI Development. Contributed to the full project dossier, focusing on the system’s design, ethical considerations, and real-world applicability. The project was awarded 1st place among 4 teams in the Ethical AI Development BIP and ranked in the Top 3 among the 12 teams across all three BIPs."
+        "description": "Developed and presented ApolloMed, an AI model designed to provide medical recommendations to healthcare stakeholders, within the Blended Intensive Programme (BIP) on Ethical AI Development. Contributed to the full project dossier, focusing on the system’s design, ethical considerations, and real-world applicability. The project was awarded 1st place among 4 teams in the Ethical AI Development BIP and ranked in the Top 3 among the 12 teams across all three BIPs.",
+        "logo": "resources/logos/tuiasi.png"
       },
       {
         "date": "21 Oct 2025",
         "subtitle": "Seminar (Online)",
         "title": "Gen-AI Skills for Work and Beyond",
         "institution": "The Tipping Point (with Dialectica)",
-        "description": "Attended a workshop on the practical application of Generative AI (GenAI) tools in modern professional domains, including project management, customer experience, and marketing & sales. Acquired practical guidance on leveraging GenAI for academic tasks and early career development."
+        "description": "Attended a workshop on the practical application of Generative AI (GenAI) tools in modern professional domains, including project management, customer experience, and marketing & sales. Acquired practical guidance on leveraging GenAI for academic tasks and early career development.",
+        "logo": "resources/logos/thetippingpoint.png"
       },
       {
         "date": "21 - 25 Jul 2025",
         "subtitle": "CCI Summer School",
         "title": "CIDOC CRM Interoperability and Applications",
         "institution": "Centre for Cultural Information, ISL, ICS-FORTH, Heraklion, Greece",
-        "description": "Attended the Summer School on CIDOC CRM (July 2025, FORTH-ICS, Heraklion, Crete), part of the Digital Humanities programme. Received training on conceptual modeling, interoperability, and applications of the CIDOC CRM ontology. Participated in hands-on sessions on data transformation and knowledge graph construction. Explored the use of CIDOC CRM in cultural heritage documentation and AI-supported workflows."
+        "description": "Attended the Summer School on CIDOC CRM (July 2025, FORTH-ICS, Heraklion, Crete), part of the Digital Humanities programme. Received training on conceptual modeling, interoperability, and applications of the CIDOC CRM ontology. Participated in hands-on sessions on data transformation and knowledge graph construction. Explored the use of CIDOC CRM in cultural heritage documentation and AI-supported workflows.",
+        "logo": "resources/logos/isl.png"
       },
       {
         "date": "9 - 14 Feb 2025",
         "subtitle": "INGENIUM Junior Winter School 2025",
         "title": "From Idea to Disruption: Transforming Visions into Innovations",
         "institution": "Xamk University, Mikkeli, Finland (INGENIUM Program)",
-        "description": "School on entrepreneurial skills, design thinking, multicultural teamwork, and communication skills by solving real-life stakeholders' challenges and cases. The main project was to solve a real-life case problem provided by the stakeholder and develop and present it as a business idea in a 10-minute pitch."
+        "description": "School on entrepreneurial skills, design thinking, multicultural teamwork, and communication skills by solving real-life stakeholders' challenges and cases. The main project was to solve a real-life case problem provided by the stakeholder and develop and present it as a business idea in a 10-minute pitch.",
+        "logo": "resources/logos/xamk.png"
       }
     ]
   },

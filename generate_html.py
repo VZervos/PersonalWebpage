@@ -29,6 +29,18 @@ def bold_author_name(text):
     text = text.replace('&lt;b&gt;Valantis Zervos&lt;/b&gt;', '<b>Valantis Zervos</b>')
     return text
 
+def render_entry_logo(item):
+    """Render optional logo field for any entry-like JSON object."""
+    logo_path = item.get('logo')
+    if not logo_path:
+        return ''
+
+    alt_source = item.get('logoAlt') or item.get('title') or item.get('name') or 'Entry'
+    alt_text = f'{alt_source} logo'
+    return f'''<div class="entry-logo-wrap">
+                        <img src="{escape_html(logo_path)}" alt="{escape_html(alt_text)}" class="entry-logo" loading="lazy" decoding="async">
+                    </div>'''
+
 def load_data():
     """Load CV data from JSON file"""
     with open('data/cv-data.json', 'r', encoding='utf-8') as f:
@@ -54,7 +66,10 @@ def generate_education(data):
     """Generate Education section"""
     entries = []
     for entry in data['education']['entries']:
+        logo_html = render_entry_logo(entry)
         html = f'''                <div class="entry">
+                    {logo_html}
+                    <div class="entry-main">
                     <div class="title">{escape_html(entry['title'])}</div>
                     <div class="details">
                         <p class="school">{escape_html(entry['school'])}</p>'''
@@ -63,6 +78,7 @@ def generate_education(data):
         if 'note' in entry:
             html += f'\n                        <p class="note">{escape_html(entry["note"])}</p>'
         html += '''\n                    </div>
+                    </div>
                 </div>'''
         entries.append(html)
     
@@ -88,7 +104,9 @@ def generate_honors_awards(data):
     
     entries = []
     for entry in data['honorsAwards']['entries']:
+        logo_html = render_entry_logo(entry)
         entry_html = f'''                <div class="entry">
+                    {logo_html}
                     <div class="left-col">
                         <div class="date">{escape_html(entry['date'])}</div>
                     </div>
@@ -119,7 +137,9 @@ def generate_honors_awards(data):
         
         contest_entries = []
         for contest in data['honorsAwards']['contests']:
+            logo_html = render_entry_logo(contest)
             contest_html = f'''                <div class="entry">
+                    {logo_html}
                     <div class="left-col">
                         <div class="date">{escape_html(contest['date'])}</div>
                     </div>
@@ -162,8 +182,9 @@ def generate_publications(data):
             authors_escaped = escape_html(pub['authors'])
             authors_html = bold_author_name(authors_escaped)
             has_link = 'url' in pub and pub['url']
+            logo_html = render_entry_logo(pub)
             
-            html += '\n                    <div class="entry">\n                        <div class="left-col-rev">\n                            <div class="publication">'
+            html += f'\n                    <div class="entry">\n                        {logo_html}\n                        <div class="left-col-rev">\n                            <div class="publication">'
             if has_link:
                 html += f'\n                                <a target="_blank" href="{escape_html(pub["url"])}">'
             html += f'\n                                    <div class="paper-authors">{authors_html}</div>\n                                    <div class="paper-title">\n                                        {escape_html(pub["title"])}\n                                    </div>'
@@ -191,7 +212,9 @@ def generate_publications(data):
         for report in data['technicalReports']['byYear'][year]:
             authors_escaped = escape_html(report['authors'])
             authors_html = bold_author_name(authors_escaped)
+            logo_html = render_entry_logo(report)
             html += f'''\n                    <div class="entry">
+                        {logo_html}
                         <div class="left-col-rev">
                             <div class="publication">
                                 <div class="paper-authors">{authors_html}</div>
@@ -219,7 +242,9 @@ def generate_work_experience(data):
     entries = []
     for entry in data['workExperience']['entries']:
         date_html = escape_html(entry['date'])
+        logo_html = render_entry_logo(entry)
         html = f'''                    <div class="entry">
+                        {logo_html}
                         <div class="left-col">
                             <div class="date">{date_html}</div>
                         </div>
@@ -279,7 +304,9 @@ def generate_software_projects(data):
     
     for project in data['softwareProjects']['researchProfessional']:
         date_html = escape_html(project['date'])
+        logo_html = render_entry_logo(project)
         html += f'''\n                    <div class="entry">
+                        {logo_html}
                         <div class="left-col">
                             <div class="date">{date_html}</div>
                         </div>
@@ -310,7 +337,9 @@ def generate_software_projects(data):
         
         for project in data['softwareProjects']['courseProjects']['entries']:
             date_html = escape_html(project['date'])
+            logo_html = render_entry_logo(project)
             html += f'''\n                    <div class="entry">
+                        {logo_html}
                         <div class="left-col">
                             <div class="date">{date_html}</div>
                         </div>
@@ -340,7 +369,9 @@ def generate_schools_seminars(data):
     entries = []
     for entry in data['schoolsSeminars']['entries']:
         date_html = escape_html(entry['date'])
+        logo_html = render_entry_logo(entry)
         html = f'''                    <div class="entry">
+                        {logo_html}
                         <div class="left-col">
                             <div class="date">{date_html}</div>
                         </div>
@@ -385,7 +416,9 @@ def generate_volunteering(data):
                     <h2><i class="fa-solid fa-person-chalkboard"></i> Academic Volunteering</h2>'''
     
     for entry in data['volunteering']['academic']:
+        logo_html = render_entry_logo(entry)
         html += f'''\n                    <div class="entry">
+                        {logo_html}
                         <div class="left-col">
                             <div class="date">{escape_html(entry['date'])}</div>
                         </div>
@@ -416,7 +449,9 @@ def generate_volunteering(data):
                         </div>'''
     
     for entry in data['volunteering']['other']['entries']:
+        logo_html = render_entry_logo(entry)
         html += f'''\n                        <div class="entry">
+                            {logo_html}
                             <div class="left-col">
                                 <div class="date">{escape_html(entry['date'])}</div>
                             </div>
@@ -452,12 +487,16 @@ def generate_languages_hobbies_references(data):
                     <h2><i class="fa-solid fa-language"></i> Languages</h2>'''
     
     for lang in data['languages']['entries']:
+        logo_html = render_entry_logo(lang)
         html += f'''\n                    <div class="entry">
-                        <div class="title">
-                            {escape_html(lang['name'])}
-                        </div>
-                        <div class="institution">
-                            {escape_html(lang['level'])}
+                        {logo_html}
+                        <div class="entry-main">
+                            <div class="title">
+                                {escape_html(lang['name'])}
+                            </div>
+                            <div class="institution">
+                                {escape_html(lang['level'])}
+                            </div>
                         </div>
                     </div>'''
     
@@ -470,12 +509,16 @@ def generate_languages_hobbies_references(data):
                     <h2><i class="fa-solid fa-gamepad"></i> Hobbies</h2>'''
     
     for hobby in data['hobbies']['entries']:
+        logo_html = render_entry_logo(hobby)
         html += f'''\n                    <div class="entry">
-                        <div class="title">
-                            {escape_html(hobby['title'])}
-                        </div>
-                        <div class="institution">
-                            {escape_html(hobby['description'])}
+                        {logo_html}
+                        <div class="entry-main">
+                            <div class="title">
+                                {escape_html(hobby['title'])}
+                            </div>
+                            <div class="institution">
+                                {escape_html(hobby['description'])}
+                            </div>
                         </div>
                     </div>'''
     
@@ -488,7 +531,9 @@ def generate_languages_hobbies_references(data):
                     <h2><i class="fa-solid fa-square-check"></i> References</h2>'''
     
     for ref in data['references']['entries']:
+        logo_html = render_entry_logo(ref)
         html += f'''\n                    <div class="entry">
+                        {logo_html}
                         <div class="left-col">
                             <div class="title"> {escape_html(ref['name'])}</div>
                             <div class="subtitle"><a target="_blank" href="mailto:{escape_html(ref['email'])}"> {escape_html(ref['email'].replace('@', ' (at) '))} <i class="fa-solid fa-envelope"></i></a></div>
@@ -526,8 +571,10 @@ def generate_contact_me(data):
     
     for email in data['contact']['emails']:
         email_display = email['address'].replace('@', ' (at) ')
+        logo_html = render_entry_logo(email)
         html += f'''\n                    <a target="_blank" href="mailto:{escape_html(email['address'])}">
                         <div class="entry">
+                            {logo_html}
                             <div class="title">
                                 {escape_html(email_display)}
                             </div>
@@ -546,8 +593,10 @@ def generate_contact_me(data):
                     <h2><i class="fa-solid fa-link"></i> Useful Links</h2>'''
     
     for link in data['contact']['links']:
+        logo_html = render_entry_logo(link)
         html += f'''\n                    <a target="_blank" href="{escape_html(link['url'])}">
                         <div class="entry">
+                            {logo_html}
                             <div class="title">
                                 {escape_html(link['name'])}
                             </div>

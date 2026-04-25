@@ -494,6 +494,17 @@ nav {
         margin-bottom: 0.05rem;
     }
 
+    .entry .entry-logo-wrap {
+        flex: 0 0 64px;
+        width: 64px;
+        min-height: 56px;
+    }
+
+    .entry .entry-logo {
+        max-width: 58px;
+        max-height: 58px;
+    }
+
     .entry .left-col .date {
         min-width: 0;
         font-size: 0.85rem;
@@ -957,9 +968,37 @@ header .social-icon img {
     backdrop-filter: blur(5px);
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     align-items: flex-start;
-    justify-content: space-between;
+    justify-content: flex-start;
     position: relative;
     overflow: hidden;
+}
+
+.entry-logo-wrap {
+    flex: 0 0 84px;
+    width: 84px;
+    min-height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    padding: 0.2rem;
+}
+
+.entry-logo {
+    width: 100%;
+    max-width: 78px;
+    max-height: 78px;
+    height: auto;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.entry-main {
+    flex: 1 1 auto;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
 }
 
 .entry:hover {
@@ -1003,8 +1042,8 @@ header .social-icon img {
 }
 
 .left-col {
-    flex: 0 0 120px;
-    width: 120px;
+    flex: 0 0 108px;
+    width: 108px;
     font-weight: bold;
     color: #1e40af;
     font-size: 0.9rem;
@@ -1055,10 +1094,12 @@ header .social-icon img {
     line-height: 1.4;
     overflow-wrap: break-word;
     word-wrap: break-word;
+    width: 100%;
+    max-width: 100%;
 }
 
 .date {
-    min-width: 120px;
+    min-width: 108px;
     font-weight: 500;
     color: #1e40af;
     font-size: 0.9rem;
@@ -1080,6 +1121,14 @@ header .social-icon img {
 
 .details {
     flex: 1;
+}
+
+/* Let entry text use the full available row width */
+.entry .title,
+.entry .institution,
+.entry .details p,
+.entry .details li {
+    max-width: none;
 }
 
 .school {
