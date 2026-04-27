@@ -813,6 +813,9 @@ def generate_index_html(data):
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
 
+<script data-goatcounter="https://vzervos.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+        
 </body>
 </html>'''
     
