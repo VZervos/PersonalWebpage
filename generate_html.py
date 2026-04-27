@@ -635,6 +635,7 @@ def generate_index_html(data):
     <meta name="Author" content="Valantis Zervos">
     <meta name="Description" content="Valantis's biography page">
     <meta name="keywords" lang="en-us" content="valantis, zervos, csd4878, bio, biography">
+    <link rel="canonical" href="https://vzervos.github.io/PersonalWebpage/" />
 
     <title>Valantis Zervos</title>
 
@@ -649,7 +650,7 @@ def generate_index_html(data):
     <script src="js/fb_share.js"></script>
     <script src="js/open_secret.js"></script>
     <script src="js/navigation.js"></script>
-    <script src="index.js"></script>
+    <script type="module" src="index.js"></script>
 
 </head>
 <body class="bg-body-secondary">
