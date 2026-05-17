@@ -195,23 +195,30 @@
   "softwareProjects": {
     "researchProfessional": [
       {
+        "date": "July 2025 - Present",
+        "title": "A Knowledge Graph driven Pipeline for Validating RAG and Multi-Hop based LLM Answers",
+        "institution": "Huawei Technologies Research & Development (UK) Ltd [via ICS-FORTH]",
+        "description": "Contributed to the design and implementation of a KG-driven validation pipeline for Retrieval-Augmented Generation (RAG) systems. Developed mechanisms for semantic triple validation, entity consolidation, and Knowledge Graph verbalization to support answer verification and hallucination reduction in LLM-based QA systems.",
+        "logo": "resources/logos/huawei.jpg"
+      },
+      {
         "date": "February 2026",
         "title": "Dancing Group \"Alios\" Webpage",
-        "institution": "Dancing Group ”Alios” (Freelance Work)",
+        "institution": "Dancing Group ”Alios” [Freelance Work]",
         "description": "Designed and implemented the webpage of the Dancing Group \"Alios\" Corfu using HTML, CSS, and JavaScript by utilizing AI tools. Accessible via www.alios-corfu.com",
         "logo": "resources/logos/alios.png"
       },
       {
         "date": "July 2024 - Sept 2024",
         "title": "FAO Restoration Analysis: GIS",
-        "institution": "FORTH, Food and Agriculture Organization (FAO-UN)",
+        "institution": "Food and Agriculture Organization (FAO-UN) [via ICS-FORTH]",
         "description": "Designed and implemented a Geographical Information System (GIS) platform as an extension of the work \"Analysis of the 'focus' and 'sentiment' of restoration interventions in the aquatic domain\" which takes as input a data file (.mra file) from the tool presented in the paper and shows its contents on a live map. Implemented using ReactJS, MaterialUI and ArcGis.",
         "logo": "resources/logos/fao.png"
       },
       {
         "date": "July 2023 - Jan 2024",
         "title": "EKT WorkFun+",
-        "institution": "FORTH, National Documentation and Electronic Content Centre of Greece (EKT)",
+        "institution": "National Documentation and Electronic Content Centre of Greece (EKT) [via ICS-FORTH]",
         "description": "Designed and implemented a statistics component with data visualization (bars, pies) using ReactJS and MaterialUI. Developed a barcode generation service using Java for PDF outputs.",
         "logo": "resources/logos/ekt.png"
       }
