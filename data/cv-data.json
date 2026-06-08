@@ -20,7 +20,7 @@
       "Since my second year of undergraduate studies, I have been a scholar at FORTH-ICS, contributing to research and industrial projects in collaboration with institutions such as the National Documentation and Electronic Content Centre of Greece (EKT), Huawei, and the Food and Agriculture Organization (FAO) of the United Nations. My work spans system development and research within the Information Systems Laboratory (ISL) at FORTH-ICS and the Computer Science Department of the University of Crete. I am currently a graduate researcher, working on ongoing projects alongside my master's thesis.",
       "I have authored three research papers, one workshop paper, and one technical report, with publications appearing in venues such as TPDL, IJCKG, and the TGD Workshop at EDBT, along with an additional submission to HAICTA. I have received three scholarships, including national-level distinctions, and multiple academic awards. I have also achieved top rankings in academic competitions, including first place at the INGENIUM Senior Winter School (project: ApolloMed), second place in an entrepreneurship competition at the University of Crete (project: Triangle), and a top-five finish at the FuturEd AI Hackathon (project: MentorMind).",
       "I have served as a Distinguished Undergraduate Teaching Assistant at the University of Crete and am currently a member of the INGENIUM Student Board, representing the University of Crete.",
-      "My research interests include Web and Semantic Data Management, Knowledge Graphs, full-stack systems, and their integration with Large Language Models (LLMs)."
+      "My research interests include Web and Semantic Data Management, Knowledge Graphs, and their integration with Large Language Models (LLMs)."
     ]
   },
   "education": {
@@ -128,12 +128,12 @@
         {
           "authors": "Yannis Marketakis, Michalis Mountantonakis, Pavlos Fafalios, Valantis Zervos, Anastasia Analyti, Arne Langlet, Anton Ellenbroek, Kim J. Friedman, Marcel Mallow and Yannis Tzitzikas",          ",title": "Analysis of Large Numbers of Scientific Papers: A Case Study on Finding the Focus of Ecosystem Restoration Intervention",
           "title": "From Scientific Text to Decision Support: A Digital Workflow for Ecosystem Restoration Analysis",
-          "status2": "Submitted to HAICTA 2026"
+          "status": "Accepted to HAICTA 2026"
         },
         {
           "authors": "Valantis Zervos, Spyridon Doukeris, Kiki Miniadou, Giannis Vassiliou, Sophia Sideri and Haridimos Kondylakis",
           "title": "GSS: Graph Semantic Summarization using answer-centered explanatory subgraphs",
-          "status": "Presented in TGD Workshop - EDBT 2026"
+          "url": "https://ceur-ws.org/Vol-4192/TGD-paper6.pdf"
         }
       ],
       "2025": [
@@ -273,6 +273,14 @@
   },
   "schoolsSeminars": {
     "entries": [
+      {
+        "date": "25-29 May 2026",
+        "subtitle": "INGENIUM Senior Summer School 2026",
+        "title": "Science Meets Industry: Ethical AI Development",
+        "institution": "MTU, Cork, Ireland (INGENIUM Program)",
+        "description": "Participated in an intensive programme on Sustainable Innovation and Entrepreneurship, focusing on research impact, innovation ecosystems, and the development of real-world solutions. Developed and presented, using a theatrical play, a solution addressing electric vehicle (EV) range anxiety within a multidisciplinary team, exploring its societal, environmental, and economic impact.",
+        "logo": "resources/logos/mtu.jpg"
+      },
       {
         "date": "Organized & Presented on 31 Mar 2026",
         "subtitle": "Invited Workshop in the context of CS-209: English IV",
