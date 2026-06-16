@@ -126,6 +126,11 @@
     "byYear": {
       "2026": [
         {
+          "authors": "Valantis Zervos, Iordanis Sapidis, Apostolos Baniotis, Nikos Kontonasios, Katerina Papantoniou, Michalis Mountantonakis, Pavlos Fafalios, Yannis Tzitzikas, Shriram Piramanayagam, Amela Fejza, Roufei Lai, Yang Ren, Pavlos Vougiouklis, Jeff Z. Pan",          ",title": "From Scientific Text to Decision Support: A Digital Workflow for Ecosystem Restoration Analysis",
+          "title": "Knowledge Graph Verbalization in the Era of LLMs: A Survey",
+          "status2": "Submitted to IEEE Access"
+        },
+        {
           "authors": "Yannis Marketakis, Michalis Mountantonakis, Pavlos Fafalios, Valantis Zervos, Anastasia Analyti, Arne Langlet, Anton Ellenbroek, Kim J. Friedman, Marcel Mallow and Yannis Tzitzikas",          ",title": "Analysis of Large Numbers of Scientific Papers: A Case Study on Finding the Focus of Ecosystem Restoration Intervention",
           "title": "From Scientific Text to Decision Support: A Digital Workflow for Ecosystem Restoration Analysis",
           "status": "Accepted to HAICTA 2026"
