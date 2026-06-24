@@ -41,6 +41,130 @@ def render_entry_logo(item):
                         <img src="{escape_html(logo_path)}" alt="{escape_html(alt_text)}" class="entry-logo" loading="lazy" decoding="async">
                     </div>'''
 
+GRID_DENSITY = {
+    'compact': 'col-12 col-md-6 col-lg-4',
+    'wide': 'col-12 col-lg-6',
+    'single': 'col-12',
+    'half': 'col-12 col-md-6',
+    'links': 'col-12 col-sm-4',
+}
+
+SITE_URL = 'https://vzervos.github.io/PersonalWebpage/'
+SITE_IMAGE = SITE_URL + 'resources/me.png'
+
+def grid_row_open(extra_class=''):
+    row_class = f'row g-2 entry-grid {extra_class}'.strip()
+    return f'<div class="{row_class}">'
+
+def grid_row_close():
+    return '</div>'
+
+def wrap_grid_entry(inner_html, extra_entry_class='', density='compact'):
+    col_class = GRID_DENSITY.get(density, GRID_DENSITY['compact'])
+    entry_class = f'entry entry-grid-card h-100 {extra_entry_class}'.strip()
+    return f'''<div class="{col_class}">
+                            <div class="{entry_class}">
+{inner_html}
+                            </div>
+                        </div>'''
+
+def wrap_grid_link_entry(href, inner_html, density='compact'):
+    col_class = GRID_DENSITY.get(density, GRID_DENSITY['compact'])
+    return f'''<div class="{col_class}">
+                            <a target="_blank" href="{href}" class="text-decoration-none d-block h-100 entry-grid-link">
+                                <div class="entry entry-grid-card h-100">
+{inner_html}
+                                </div>
+                            </a>
+                        </div>'''
+
+def render_email_line(email):
+    """Render obfuscated email with mailto link and copy button."""
+    email_display = email.replace('@', ' (at) ')
+    return f'''<div class="email-line">
+                                        <a target="_blank" href="mailto:{escape_html(email)}">{escape_html(email_display)} <i class="fa-solid fa-envelope"></i></a>
+                                        <button type="button" class="copy-email-btn" data-email="{escape_html(email)}" aria-label="Copy email address" title="Copy email">
+                                            <i class="fa-regular fa-copy" aria-hidden="true"></i>
+                                        </button>
+                                    </div>'''
+
+def render_status_badges(item):
+    """Render publication status pills at the top of an entry card."""
+    badges = []
+    if item.get('status'):
+        badges.append(f'<span class="status-badge status-accepted">{escape_html(item["status"])}</span>')
+    if item.get('status2'):
+        badges.append(f'<span class="status-badge status-to_submit">{escape_html(item["status2"])}</span>')
+    if not badges:
+        return ''
+    return f'<div class="entry-badges">{"".join(badges)}</div>'
+
+def build_meta_description(data):
+    """Build a concise meta description from the short bio."""
+    bio = clean_latex_artifacts(data['shortBio']['paragraphs'][0])
+    if len(bio) > 155:
+        bio = bio[:152].rsplit(' ', 1)[0] + '...'
+    return bio
+
+def generate_head_extras(data):
+    """Generate SEO, Open Graph, Twitter Card, and JSON-LD metadata."""
+    personal = data['personal']
+    description = escape_html(build_meta_description(data))
+    full_name = f"{personal['firstName']} {personal['lastName']}"
+    page_title = escape_html(f'{full_name} | Research & CV')
+    job_title = escape_html(personal['title'][0]) if personal.get('title') else ''
+
+    same_as = []
+    for link in data['contact']['links']:
+        same_as.append(link['url'])
+
+    json_ld = {
+        '@context': 'https://schema.org',
+        '@type': 'Person',
+        'name': full_name,
+        'givenName': personal['firstName'],
+        'familyName': personal['lastName'],
+        'url': SITE_URL,
+        'image': SITE_IMAGE,
+        'email': personal['email'],
+        'jobTitle': personal['title'][0] if personal.get('title') else None,
+        'worksFor': [
+            {
+                '@type': 'Organization',
+                'name': 'University of Crete',
+            },
+            {
+                '@type': 'Organization',
+                'name': 'ICS-FORTH',
+            },
+        ],
+        'sameAs': same_as,
+    }
+    json_ld = {key: value for key, value in json_ld.items() if value}
+    json_ld_script = json.dumps(json_ld, indent=2, ensure_ascii=False)
+
+    return f'''    <meta name="description" content="{description}">
+    <meta name="keywords" lang="en-us" content="valantis zervos, computer science, knowledge graphs, semantic web, university of crete, forth, research">
+    <link rel="canonical" href="{SITE_URL}" />
+
+    <meta property="og:type" content="profile">
+    <meta property="og:title" content="{page_title}">
+    <meta property="og:description" content="{description}">
+    <meta property="og:url" content="{SITE_URL}">
+    <meta property="og:image" content="{SITE_IMAGE}">
+    <meta property="og:site_name" content="{escape_html(full_name)}">
+    <meta property="profile:first_name" content="{escape_html(personal['firstName'])}">
+    <meta property="profile:last_name" content="{escape_html(personal['lastName'])}">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{page_title}">
+    <meta name="twitter:description" content="{description}">
+    <meta name="twitter:image" content="{SITE_IMAGE}">
+
+    <script type="application/ld+json">
+{json_ld_script}
+    </script>'''
+
 def load_data():
     """Load CV data from JSON file"""
     with open('data/cv-data.json', 'r', encoding='utf-8') as f:
@@ -67,20 +191,18 @@ def generate_education(data):
     entries = []
     for entry in data['education']['entries']:
         logo_html = render_entry_logo(entry)
-        html = f'''                <div class="entry">
-                    {logo_html}
-                    <div class="entry-main">
-                    <div class="title">{escape_html(entry['title'])}</div>
-                    <div class="details">
-                        <p class="school">{escape_html(entry['school'])}</p>'''
+        inner = f'''                                {logo_html}
+                                <div class="entry-main">
+                                    <div class="title">{escape_html(entry['title'])}</div>
+                                    <div class="details">
+                                        <p class="school">{escape_html(entry['school'])}</p>'''
         if 'grade' in entry:
-            html += f'\n                        <p class="grade">{escape_html(entry["grade"])}</p>'
+            inner += f'\n                                        <p class="grade">{escape_html(entry["grade"])}</p>'
         if 'note' in entry:
-            html += f'\n                        <p class="note">{escape_html(entry["note"])}</p>'
-        html += '''\n                    </div>
-                    </div>
-                </div>'''
-        entries.append(html)
+            inner += f'\n                                        <p class="note">{escape_html(entry["note"])}</p>'
+        inner += '''\n                                    </div>
+                                </div>'''
+        entries.append(wrap_grid_entry(inner))
     
     entries_html = '\n'.join(entries)
     return f'''<section id="education">
@@ -88,7 +210,9 @@ def generate_education(data):
         <div class="row">
             <div class="section-content col-12 col-md">
                 <h2><i class="fa-solid fa-graduation-cap"> </i> Studies</h2>
+                {grid_row_open()}
 {entries_html}
+                {grid_row_close()}
             </div>
         </div>
     </div>
@@ -100,66 +224,50 @@ def generate_honors_awards(data):
     <div class="container-fluid">
         <div class="row">
             <div class="section-content col-12 col-md">
-                <h2><i class="fa-solid fa-award"></i> Honors & Awards</h2>'''
+                <h2><i class="fa-solid fa-award"></i> Honors & Awards</h2>
+                ''' + grid_row_open()
     
     entries = []
     for entry in data['honorsAwards']['entries']:
         logo_html = render_entry_logo(entry)
-        entry_html = f'''                <div class="entry">
-                    {logo_html}
-                    <div class="left-col">
-                        <div class="date">{escape_html(entry['date'])}</div>
-                    </div>
-                    <div class="right-col">
-                        <div class="title">
-                            {escape_html(entry['title'])}
-                        </div>
-                        <div class="institution">
-                            {escape_html(entry['institution'])}
-                        </div>
-                        <div class="details">
-                            <p>{escape_html(entry['description'])}
-                            </p>
-                        </div>
-                    </div>
-                </div>'''
-        entries.append(entry_html)
+        inner = f'''                                {logo_html}
+                                <div class="entry-main">
+                                    <div class="date">{escape_html(entry['date'])}</div>
+                                    <div class="title">{escape_html(entry['title'])}</div>
+                                    <div class="institution">{escape_html(entry['institution'])}</div>
+                                    <div class="details">
+                                        <p>{escape_html(entry['description'])}</p>
+                                    </div>
+                                </div>'''
+        entries.append(wrap_grid_entry(inner, density='wide'))
     
-    entries_html = '\n\n'.join(entries)
-    html += f'\n{entries_html}'
+    html += '\n' + '\n'.join(entries)
+    html += '\n                ' + grid_row_close()
     html += '''\n            </div>
         </div>'''
     
     if 'contests' in data['honorsAwards'] and data['honorsAwards']['contests']:
-        html += '''\n        <div class="row">
+        html += f'''\n        <div class="row">
             <div class="section-content col-12 col-md">
-                <h2><i class="fa-solid fa-trophy"></i> Contests</h2>'''
+                <h2><i class="fa-solid fa-trophy"></i> Contests</h2>
+                {grid_row_open()}'''
         
         contest_entries = []
         for contest in data['honorsAwards']['contests']:
             logo_html = render_entry_logo(contest)
-            contest_html = f'''                <div class="entry">
-                    {logo_html}
-                    <div class="left-col">
-                        <div class="date">{escape_html(contest['date'])}</div>
-                    </div>
-                    <div class="right-col">
-                        <div class="title">
-                            {escape_html(contest['title'])}
-                        </div>
-                        <div class="institution">
-                            {escape_html(contest['institution'])}
-                        </div>
-                        <div class="details">
-                            <p>{escape_html(contest['description'])}
-                            </p>
-                        </div>
-                    </div>
-                </div>'''
-            contest_entries.append(contest_html)
+            inner = f'''                                {logo_html}
+                                <div class="entry-main">
+                                    <div class="date">{escape_html(contest['date'])}</div>
+                                    <div class="title">{escape_html(contest['title'])}</div>
+                                    <div class="institution">{escape_html(contest['institution'])}</div>
+                                    <div class="details">
+                                        <p>{escape_html(contest['description'])}</p>
+                                    </div>
+                                </div>'''
+            contest_entries.append(wrap_grid_entry(inner, density='compact'))
         
-        contests_html = '\n\n'.join(contest_entries)
-        html += f'\n{contests_html}'
+        html += '\n' + '\n'.join(contest_entries)
+        html += '\n                ' + grid_row_close()
         html += '''\n            </div>
         </div>'''
     
@@ -177,28 +285,28 @@ def generate_publications(data):
 
     years = sorted(data['publications']['byYear'].keys(), reverse=True)
     for year in years:
-        html += f'\n                <div class="year-section">\n                    <h3>{year}</h3>'
+        html += f'\n                <div class="year-section">\n                    <h3>{year}</h3>\n                    {grid_row_open()}'
         for pub in data['publications']['byYear'][year]:
             authors_escaped = escape_html(pub['authors'])
             authors_html = bold_author_name(authors_escaped)
             has_link = 'url' in pub and pub['url']
             logo_html = render_entry_logo(pub)
             
-            html += f'\n                    <div class="entry">\n                        {logo_html}\n                        <div class="left-col-rev">\n                            <div class="publication">'
+            inner = f'''                                {logo_html}
+                                <div class="entry-main">
+                                    {render_status_badges(pub)}
+                                    <div class="publication">'''
             if has_link:
-                html += f'\n                                <a target="_blank" href="{escape_html(pub["url"])}">'
-            html += f'\n                                    <div class="paper-authors">{authors_html}</div>\n                                    <div class="paper-title">\n                                        {escape_html(pub["title"])}\n                                    </div>'
+                inner += f'\n                                        <a target="_blank" href="{escape_html(pub["url"])}">'
+            inner += f'\n                                            <div class="paper-authors">{authors_html}</div>\n                                            <div class="paper-title">{escape_html(pub["title"])}</div>'
             if has_link:
-                html += '\n                                </a>'
-            html += '\n                            </div>\n                        </div>\n                        <div class="right-col-rev">'
-            if 'status' in pub:
-                html += f'\n                            <div class="status-accepted">\n                                {escape_html(pub["status"])}\n                            </div>'
-            if 'status2' in pub:
-                html += f'\n                            <div class="status-to_submit">\n                                {escape_html(pub["status2"])}\n                            </div>'
+                inner += '\n                                        </a>'
+            inner += '\n                                    </div>'
             if has_link and 'status' not in pub:
-                html += f'\n                            <a target="_blank" rel="noopener noreferrer" href="{escape_html(pub["url"])}">\n                                <i class="fa-solid fa-arrow-up-right-from-square"></i>\n                            </a>'
-            html += '\n                        </div>\n                    </div>'
-        html += '\n                </div>'
+                inner += f'\n                                    <a class="publication-link" target="_blank" rel="noopener noreferrer" href="{escape_html(pub["url"])}">\n                                        <i class="fa-solid fa-arrow-up-right-from-square"></i>\n                                    </a>'
+            inner += '\n                                </div>'
+            html += '\n' + wrap_grid_entry(inner, density='single')
+        html += f'\n                    {grid_row_close()}\n                </div>'
     
     html += '''\n            </div>
         </div>
@@ -208,28 +316,21 @@ def generate_publications(data):
     
     report_years = sorted(data['technicalReports']['byYear'].keys(), reverse=True)
     for year in report_years:
-        html += f'\n                <div class="year-section">\n                    <h3>{year}</h3>'
+        html += f'\n                <div class="year-section">\n                    <h3>{year}</h3>\n                    {grid_row_open()}'
         for report in data['technicalReports']['byYear'][year]:
             authors_escaped = escape_html(report['authors'])
             authors_html = bold_author_name(authors_escaped)
             logo_html = render_entry_logo(report)
-            html += f'''\n                    <div class="entry">
-                        {logo_html}
-                        <div class="left-col-rev">
-                            <div class="publication">
-                                <div class="paper-authors">{authors_html}</div>
-                                <div class="paper-title">
-                                    {escape_html(report['title'])}
-                                </div>
-                            </div>
-                        </div>
-                        <div class="right-col-rev">
-                            <div class="status-accepted">
-                                {escape_html(report['status'])}
-                            </div>
-                        </div>
-                    </div>'''
-        html += '\n                </div>'
+            inner = f'''                                {logo_html}
+                                <div class="entry-main">
+                                    {render_status_badges(report)}
+                                    <div class="publication">
+                                        <div class="paper-authors">{authors_html}</div>
+                                        <div class="paper-title">{escape_html(report['title'])}</div>
+                                    </div>
+                                </div>'''
+            html += '\n' + wrap_grid_entry(inner, density='wide')
+        html += f'\n                    {grid_row_close()}\n                </div>'
     
     html += '''\n            </div>
         </div>
@@ -243,41 +344,33 @@ def generate_work_experience(data):
     for entry in data['workExperience']['entries']:
         date_html = escape_html(entry['date'])
         logo_html = render_entry_logo(entry)
-        html = f'''                    <div class="entry">
-                        {logo_html}
-                        <div class="left-col">
-                            <div class="date">{date_html}</div>
-                        </div>
-                        <div class="right-col">
-                            <div class="title">
-                                {escape_html(entry['title'])}
-                            </div>
-                            <div class="institution">
-                                {escape_html(entry['institution'])}
-                            </div>
-                            <div class="details">
-                                <p>{escape_html(entry['description'])}'''
+        inner = f'''                                {logo_html}
+                                <div class="entry-main">
+                                    <div class="date">{date_html}</div>
+                                    <div class="title">{escape_html(entry['title'])}</div>
+                                    <div class="institution">{escape_html(entry['institution'])}</div>
+                                    <div class="details">
+                                        <p>{escape_html(entry['description'])}'''
         if 'courses' in entry:
-            html += '\n                                    <ul>'
+            inner += '\n                                            <ul>'
             for course in entry['courses']:
-                html += f'\n                                        <li>{escape_html(course)}</li>'
-            html += '\n                                    </ul>'
+                inner += f'\n                                                <li>{escape_html(course)}</li>'
+            inner += '\n                                            </ul>'
         if 'workItems' in entry:
-            html += '\n                                    <ul>'
+            inner += '\n                                            <ul>'
             for item in entry['workItems']:
                 if isinstance(item, str):
-                    html += f'\n                                        <li>{escape_html(item)}</li>'
+                    inner += f'\n                                                <li>{escape_html(item)}</li>'
                 elif isinstance(item, dict) and 'title' in item:
-                    html += f'\n                                        <li>{escape_html(item["title"])}\n                                            <ul>'
+                    inner += f'\n                                                <li>{escape_html(item["title"])}\n                                                    <ul>'
                     for sub_item in item.get('items', []):
-                        html += f'\n                                                <li>{escape_html(sub_item)}</li>'
-                    html += f'\n                                            </ul>\n                                            {escape_html(item.get("note", ""))}\n                                        </li>'
-            html += '\n                                    </ul>'
-        html += '''\n                                </p>
-                            </div>
-                        </div>
-                    </div>'''
-        entries.append(html)
+                        inner += f'\n                                                        <li>{escape_html(sub_item)}</li>'
+                    inner += f'\n                                                    </ul>\n                                                    {escape_html(item.get("note", ""))}\n                                                </li>'
+            inner += '\n                                            </ul>'
+        inner += '''\n                                        </p>
+                                    </div>
+                                </div>'''
+        entries.append(wrap_grid_entry(inner, density='wide'))
     
     entries_html = '\n'.join(entries)
     return f'''<section id="workexperience">
@@ -286,7 +379,9 @@ def generate_work_experience(data):
             <div class="section-content col-12 col-md">
                 <div>
                     <h2><i class="fa-solid fa-building"></i> Work Experience</h2>
+                    {grid_row_open()}
 {entries_html}
+                    {grid_row_close()}
                 </div>
             </div>
         </div>
@@ -295,36 +390,30 @@ def generate_work_experience(data):
 
 def generate_software_projects(data):
     """Generate Software Projects section"""
-    html = '''<section id="softwareprojects">
+    html = f'''<section id="softwareprojects">
     <div class="container-fluid">
         <div class="row">
             <div class="section-content col-12 col-md">
                 <div>
-                    <h2><i class="fa-solid fa-laptop-code"></i> Research/Professional Software Projects</h2>'''
+                    <h2><i class="fa-solid fa-laptop-code"></i> Research/Professional Software Projects</h2>
+                    {grid_row_open()}'''
     
     for project in data['softwareProjects']['researchProfessional']:
         date_html = escape_html(project['date'])
         logo_html = render_entry_logo(project)
-        html += f'''\n                    <div class="entry">
-                        {logo_html}
-                        <div class="left-col">
-                            <div class="date">{date_html}</div>
-                        </div>
-                        <div class="right-col">
-                            <div class="title">
-                                {escape_html(project['title'])}
-                            </div>
-                            <div class="institution">
-                                {escape_html(project['institution'])}
-                            </div>
-                            <div class="details">
-                                <p>{escape_html(project['description'])}
-                                </p>
-                            </div>
-                        </div>
-                    </div>'''
+        inner = f'''                                {logo_html}
+                                <div class="entry-main">
+                                    <div class="date">{date_html}</div>
+                                    <div class="title">{escape_html(project['title'])}</div>
+                                    <div class="institution">{escape_html(project['institution'])}</div>
+                                    <div class="details">
+                                        <p>{escape_html(project['description'])}</p>
+                                    </div>
+                                </div>'''
+        html += '\n' + wrap_grid_entry(inner, density='wide')
     
-    html += '''\n                </div>
+    html += f'''\n                    {grid_row_close()}
+                </div>
             </div>
         </div>
         <div class="row">
@@ -333,29 +422,23 @@ def generate_software_projects(data):
                     <h2><i class="fa-solid fa-pen"></i> Course Projects</h2>'''
     
     if 'courseProjects' in data['softwareProjects']:
-        html += f'\n                    <div class="institution">\n                        {escape_html(data["softwareProjects"]["courseProjects"]["note"])}\n                    </div>'
+        html += f'\n                    <div class="institution">{escape_html(data["softwareProjects"]["courseProjects"]["note"])}</div>\n                    {grid_row_open()}'
         
         for project in data['softwareProjects']['courseProjects']['entries']:
             date_html = escape_html(project['date'])
             logo_html = render_entry_logo(project)
-            html += f'''\n                    <div class="entry">
-                        {logo_html}
-                        <div class="left-col">
-                            <div class="date">{date_html}</div>
-                        </div>
-                        <div class="right-col">
-                            <div class="title">
-                                {escape_html(project['title'])}
-                            </div>
-                            <div class="institution">
-                                {escape_html(project['institution'])}
-                            </div>
-                            <div class="details">
-                                <p>{escape_html(project['description'])}
-                                </p>
-                            </div>
-                        </div>
-                    </div>'''
+            inner = f'''                                {logo_html}
+                                <div class="entry-main">
+                                    <div class="date">{date_html}</div>
+                                    <div class="title">{escape_html(project['title'])}</div>
+                                    <div class="institution">{escape_html(project['institution'])}</div>
+                                    <div class="details">
+                                        <p>{escape_html(project['description'])}</p>
+                                    </div>
+                                </div>'''
+            html += '\n' + wrap_grid_entry(inner, density='compact')
+        
+        html += f'\n                    {grid_row_close()}'
     
     html += '''\n                </div>
             </div>
@@ -370,27 +453,18 @@ def generate_schools_seminars(data):
     for entry in data['schoolsSeminars']['entries']:
         date_html = escape_html(entry['date'])
         logo_html = render_entry_logo(entry)
-        html = f'''                    <div class="entry">
-                        {logo_html}
-                        <div class="left-col">
-                            <div class="date">{date_html}</div>
-                        </div>
-                        <div class="right-col">'''
+        inner = f'''                                {logo_html}
+                                <div class="entry-main">
+                                    <div class="date">{date_html}</div>'''
         if 'subtitle' in entry:
-            html += f'\n                            <div class="subtitle">\n                                {escape_html(entry["subtitle"])}\n                            </div>'
-        html += f'''\n                            <div class="title">
-                                {escape_html(entry['title'])}
-                            </div>
-                            <div class="institution">
-                                {escape_html(entry['institution'])}
-                            </div>
-                            <div class="details">
-                                <p>{escape_html(entry['description'])}
-                                </p>
-                            </div>
-                        </div>
-                    </div>'''
-        entries.append(html)
+            inner += f'\n                                    <div class="subtitle">{escape_html(entry["subtitle"])}</div>'
+        inner += f'''\n                                    <div class="title">{escape_html(entry['title'])}</div>
+                                    <div class="institution">{escape_html(entry['institution'])}</div>
+                                    <div class="details">
+                                        <p>{escape_html(entry['description'])}</p>
+                                    </div>
+                                </div>'''
+        entries.append(wrap_grid_entry(inner, density='wide'))
     
     entries_html = '\n'.join(entries)
     return f'''<section id="schoolsseminars">
@@ -399,7 +473,9 @@ def generate_schools_seminars(data):
             <div class="section-content col-12 col-md">
                 <div>
                     <h2><i class="fa-solid fa-school"></i> Schools, Seminars, Workshops</h2>
+                    {grid_row_open()}
 {entries_html}
+                    {grid_row_close()}
                 </div>
             </div>
         </div>
@@ -408,68 +484,56 @@ def generate_schools_seminars(data):
 
 def generate_volunteering(data):
     """Generate Volunteering section"""
-    html = '''<section id="volunteering">
+    html = f'''<section id="volunteering">
     <div class="container-fluid">
         <div class="row">
             <div class="section-content col-12 col-md">
                 <div>
-                    <h2><i class="fa-solid fa-person-chalkboard"></i> Academic Volunteering</h2>'''
+                    <h2><i class="fa-solid fa-person-chalkboard"></i> Academic Volunteering</h2>
+                    {grid_row_open()}'''
     
     for entry in data['volunteering']['academic']:
         logo_html = render_entry_logo(entry)
-        html += f'''\n                    <div class="entry">
-                        {logo_html}
-                        <div class="left-col">
-                            <div class="date">{escape_html(entry['date'])}</div>
-                        </div>
-                        <div class="right-col">'''
+        inner = f'''                                {logo_html}
+                                <div class="entry-main">
+                                    <div class="date">{escape_html(entry['date'])}</div>'''
         if 'subtitle' in entry:
-            html += f'\n                            <div class="subtitle">\n                                {escape_html(entry["subtitle"])}\n                            </div>'
-        html += f'''\n                            <div class="title">
-                                {escape_html(entry['title'])}
-                            </div>
-                            <div class="institution">
-                                {escape_html(entry['institution'])}
-                            </div>
-                            <div class="details">
-                                <p>{escape_html(entry['description'])}
-                                </p>
-                            </div>
-                        </div>
-                    </div>'''
+            inner += f'\n                                    <div class="subtitle">{escape_html(entry["subtitle"])}</div>'
+        inner += f'''\n                                    <div class="title">{escape_html(entry['title'])}</div>
+                                    <div class="institution">{escape_html(entry['institution'])}</div>
+                                    <div class="details">
+                                        <p>{escape_html(entry['description'])}</p>
+                                    </div>
+                                </div>'''
+        html += '\n' + wrap_grid_entry(inner, density='wide')
     
-    html += f'''\n                </div>
+    html += f'''\n                    {grid_row_close()}
+                </div>
             </div>
-            <div class="row">
-                <div class="section-content col-12 col-md">
-                    <div>
-                        <h2><i class="fa-solid fa-tree"></i> Other Volunteering</h2>
-                        <div class="institution">
-                            {escape_html(data['volunteering']['other']['note'])}
-                        </div>'''
+        </div>
+        <div class="row">
+            <div class="section-content col-12 col-md">
+                <div>
+                    <h2><i class="fa-solid fa-tree"></i> Other Volunteering</h2>
+                    <div class="institution">
+                        {escape_html(data['volunteering']['other']['note'])}
+                    </div>
+                    {grid_row_open()}'''
     
     for entry in data['volunteering']['other']['entries']:
         logo_html = render_entry_logo(entry)
-        html += f'''\n                        <div class="entry">
-                            {logo_html}
-                            <div class="left-col">
-                                <div class="date">{escape_html(entry['date'])}</div>
-                            </div>
-                            <div class="right-col">
-                                <div class="title">
-                                    {escape_html(entry['title'])}
-                                </div>
-                                <div class="institution">
-                                    {escape_html(entry['institution'])}
-                                </div>
-                                <div class="details">
-                                    <p>{escape_html(entry['description'])}
-                                    </p>
-                                </div>
-                            </div>
-                        </div>'''
+        inner = f'''                                {logo_html}
+                                <div class="entry-main">
+                                    <div class="date">{escape_html(entry['date'])}</div>
+                                    <div class="title">{escape_html(entry['title'])}</div>
+                                    <div class="institution">{escape_html(entry['institution'])}</div>
+                                    <div class="details">
+                                        <p>{escape_html(entry['description'])}</p>
+                                    </div>
+                                </div>'''
+        html += '\n' + wrap_grid_entry(inner, density='wide')
     
-    html += '''\n                    </div>
+    html += f'''\n                    {grid_row_close()}
                 </div>
             </div>
         </div>
@@ -479,81 +543,74 @@ def generate_volunteering(data):
 
 def generate_languages_hobbies_references(data):
     """Generate Languages, Hobbies & References section"""
-    html = '''<section id="languageshobbiesreferences">
+    html = f'''<section id="languageshobbiesreferences">
     <div class="container-fluid">
         <div class="row">
             <div class="section-content col-12 col-md">
                 <div>
-                    <h2><i class="fa-solid fa-language"></i> Languages</h2>'''
+                    <h2><i class="fa-solid fa-language"></i> Languages</h2>
+                    {grid_row_open()}'''
     
     for lang in data['languages']['entries']:
         logo_html = render_entry_logo(lang)
-        html += f'''\n                    <div class="entry">
-                        {logo_html}
-                        <div class="entry-main">
-                            <div class="title">
-                                {escape_html(lang['name'])}
-                            </div>
-                            <div class="institution">
-                                {escape_html(lang['level'])}
-                            </div>
-                        </div>
-                    </div>'''
+        inner = f'''                                {logo_html}
+                                <div class="entry-main">
+                                    <div class="title">{escape_html(lang['name'])}</div>
+                                    <div class="institution">{escape_html(lang['level'])}</div>
+                                </div>'''
+        html += '\n' + wrap_grid_entry(inner, density='half')
     
-    html += '''\n                </div>
+    html += f'''\n                    {grid_row_close()}
+                </div>
             </div>
         </div>
         <div class="row">
             <div class="section-content col-12 col-md">
                 <div>
-                    <h2><i class="fa-solid fa-gamepad"></i> Hobbies</h2>'''
+                    <h2><i class="fa-solid fa-gamepad"></i> Hobbies</h2>
+                    {grid_row_open()}'''
     
     for hobby in data['hobbies']['entries']:
         logo_html = render_entry_logo(hobby)
-        html += f'''\n                    <div class="entry">
-                        {logo_html}
-                        <div class="entry-main">
-                            <div class="title">
-                                {escape_html(hobby['title'])}
-                            </div>
-                            <div class="institution">
-                                {escape_html(hobby['description'])}
-                            </div>
-                        </div>
-                    </div>'''
+        inner = f'''                                {logo_html}
+                                <div class="entry-main">
+                                    <div class="title">{escape_html(hobby['title'])}</div>
+                                    <div class="institution">{escape_html(hobby['description'])}</div>
+                                </div>'''
+        html += '\n' + wrap_grid_entry(inner)
     
-    html += '''\n                </div>
+    html += f'''\n                    {grid_row_close()}
+                </div>
             </div>
         </div>
         <div class="row">
             <div class="section-content col-12 col-md">
                 <div>
-                    <h2><i class="fa-solid fa-square-check"></i> References</h2>'''
+                    <h2><i class="fa-solid fa-square-check"></i> References</h2>
+                    {grid_row_open()}'''
     
     for ref in data['references']['entries']:
         logo_html = render_entry_logo(ref)
-        html += f'''\n                    <div class="entry">
-                        {logo_html}
-                        <div class="left-col">
-                            <div class="title"> {escape_html(ref['name'])}</div>
-                            <div class="subtitle"><a target="_blank" href="mailto:{escape_html(ref['email'])}"> {escape_html(ref['email'].replace('@', ' (at) '))} <i class="fa-solid fa-envelope"></i></a></div>
-                        </div>
-                        <div class="right-col">
-                            <div class="details">
-                                <p>'''
+        inner = f'''                                {logo_html}
+                                <div class="entry-main">
+                                    <div class="title">{escape_html(ref['name'])}</div>
+                                    {render_email_line(ref['email'])}
+                                    <div class="details">
+                                        <p>'''
         if len(ref['positions']) == 1:
-            html += f'\n                                        {escape_html(ref["positions"][0])} '
+            inner += f'\n                                            {escape_html(ref["positions"][0])}'
         else:
-            html += '\n                                        <ul>'
+            inner += '\n                                            <ul>'
             for pos in ref['positions']:
-                html += f'\n                                            <li>{escape_html(pos)}</li>'
-            html += '\n                                        </ul>'
-        html += '''\n                                </p>
-                            </div>
-                        </div>
-                    </div>'''
+                inner += f'\n                                                <li>{escape_html(pos)}</li>'
+            inner += '\n                                            </ul>'
+        inner += '''\n                                        </p>
+                                    </div>
+                                </div>'''
+        html += '\n' + wrap_grid_entry(inner, 'reference-entry')
     
-    html += '''\n                </div>
+    html += f'''\n                    {grid_row_close()}
+                </div>
             </div>
         </div>
     </div>
@@ -562,51 +619,38 @@ def generate_languages_hobbies_references(data):
 
 def generate_contact_me(data):
     """Generate Contact Me section"""
-    html = '''<section id="contactme">
+    html = f'''<section id="contactme">
     <div class="container-fluid">
-        <div class="row">
-            <div class="section-content col-12 col-md">
-                <div>
-                    <h2><i class="fa-solid fa-envelope"></i> Contact Me</h2>'''
+        <div class="row g-3 contact-links-row">
+            <div class="section-content col-12 col-lg-6">
+                <h2><i class="fa-solid fa-envelope"></i> Contact Me</h2>
+                {grid_row_open()}'''
     
     for email in data['contact']['emails']:
-        email_display = email['address'].replace('@', ' (at) ')
         logo_html = render_entry_logo(email)
-        html += f'''\n                    <a target="_blank" href="mailto:{escape_html(email['address'])}">
-                        <div class="entry">
-                            {logo_html}
-                            <div class="title">
-                                {escape_html(email_display)}
-                            </div>
-                            <div class="institution">
-                                {escape_html(email['label'])} <i class="fa-solid fa-envelope"></i>
-                            </div>
-                        </div>
-                    </a>'''
+        inner = f'''                                    {logo_html}
+                                    <div class="entry-main">
+                                        <div class="title">{escape_html(email['label'])}</div>
+                                        {render_email_line(email['address'])}
+                                    </div>'''
+        html += '\n' + wrap_grid_entry(inner, density='single')
     
-    html += '''\n                </div>
+    html += f'''\n                {grid_row_close()}
             </div>
-        </div>
-        <div class="row">
-            <div class="section-content col-12 col-md">
-                <div>
-                    <h2><i class="fa-solid fa-link"></i> Useful Links</h2>'''
+            <div class="section-content col-12 col-lg-6">
+                <h2><i class="fa-solid fa-link"></i> Useful Links</h2>
+                {grid_row_open('useful-links-grid')}'''
     
     for link in data['contact']['links']:
         logo_html = render_entry_logo(link)
-        html += f'''\n                    <a target="_blank" href="{escape_html(link['url'])}">
-                        <div class="entry">
-                            {logo_html}
-                            <div class="title">
-                                {escape_html(link['name'])}
-                            </div>
-                            <div class="institution">
-                                {escape_html(link['url'])} <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                            </div>
-                        </div>
-                    </a>'''
+        inner = f'''                                    {logo_html}
+                                    <div class="entry-main">
+                                        <div class="title">{escape_html(link['name'])}</div>
+                                        <div class="institution link-url">{escape_html(link['url'])} <i class="fa-solid fa-arrow-up-right-from-square"></i></div>
+                                    </div>'''
+        html += '\n' + wrap_grid_link_entry(escape_html(link['url']), inner, density='links')
     
-    html += '''\n                </div>
+    html += f'''\n                {grid_row_close()}
             </div>
         </div>
     </div>
@@ -626,22 +670,23 @@ def generate_index_html(data):
     volunteering = generate_volunteering(data)
     languages_hobbies_references = generate_languages_hobbies_references(data)
     contact_me = generate_contact_me(data)
+    head_extras = generate_head_extras(data)
+    personal = data['personal']
+    page_title = escape_html(f"{personal['firstName']} {personal['lastName']} | Research & CV")
     
-    html = '''<!DOCTYPE html>
+    html = f'''<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="Author" content="Valantis Zervos">
-    <meta name="Description" content="Valantis's biography page">
-    <meta name="keywords" lang="en-us" content="valantis, zervos, csd4878, bio, biography">
-    <link rel="canonical" href="https://vzervos.github.io/PersonalWebpage/" />
+{head_extras}
 
-    <title>Valantis Zervos</title>
+    <title>{page_title}</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
     <link rel="stylesheet" href="css/default.css">
     <!--    <link rel="stylesheet" href="css/tablet.css">-->
@@ -650,6 +695,7 @@ def generate_index_html(data):
     <script src="js/fb_share.js"></script>
     <script src="js/open_secret.js"></script>
     <script src="js/navigation.js"></script>
+    <script src="js/copy-email.js"></script>
     <script type="module" src="index.js"></script>
 
 </head>

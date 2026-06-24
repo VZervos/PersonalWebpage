@@ -5,10 +5,12 @@ This directory contains the JSON data file that stores all your CV information.
 ## How to Use
 
 1. **Edit your information**: Open `cv-data.json` and edit the data directly. The structure is organized by sections:
+   - `personal`: Name, titles, and contact details used in metadata
    - `shortBio`: Your biography paragraphs
    - `education`: Your educational background
    - `honorsAwards`: Awards and honors
    - `publications`: Research publications
+   - `technicalReports`: Technical reports
    - `workExperience`: Work history
    - `softwareProjects`: Software projects
    - `schoolsSeminars`: Schools and seminars attended
@@ -18,13 +20,18 @@ This directory contains the JSON data file that stores all your CV information.
    - `references`: Professional references
    - `contact`: Contact information and links
 
-2. **Generate HTML sections**: After editing the JSON file, run:
+2. **Regenerate the site**: After editing the JSON file, run from the project root:
    ```bash
-   npm run build
+   python generate_html.py
    ```
-   This will regenerate all HTML section files in the `sections/` directory.
+   This regenerates `index.html` from `cv-data.json`.
 
-3. **View your changes**: Open `index.html` in your browser to see the updated content.
+3. **Optional LaTeX CV**: To regenerate the PDF-oriented LaTeX source as well:
+   ```bash
+   python generate_latex.py
+   ```
+
+4. **View your changes**: Open `index.html` in your browser to see the updated content.
 
 ## Data Structure Examples
 
@@ -46,7 +53,7 @@ Add to the appropriate year in `publications.byYear`:
     "authors": "Author1, Author2, Valantis Zervos, ...",
     "title": "Paper Title",
     "status": "Accepted at Conference 2026",
-    "url": "https://link-to-paper.pdf"  // optional
+    "url": "https://link-to-paper.pdf"
   }
 ]
 ```
@@ -58,7 +65,7 @@ Add to the appropriate year in `publications.byYear`:
   "title": "Job Title",
   "institution": "Company/Organization",
   "description": "Job description...",
-  "courses": ["Course 1", "Course 2"]  // optional, for teaching positions
+  "courses": ["Course 1", "Course 2"]
 }
 ```
 
@@ -68,7 +75,7 @@ Most entry objects can include an optional `logo` path (relative to project root
 {
   "title": "BSc (2021-2025)",
   "school": "Computer Science Department, University of Crete (CSD, UoC)",
-  "logo": "resources/uoc-logo.png"
+  "logo": "resources/logos/uoc.png"
 }
 ```
 Optional field:
@@ -76,21 +83,18 @@ Optional field:
 
 ## Tips
 
-- Use `**Valantis Zervos**` in author lists to automatically bold your name
-- Dates can include line breaks: use ` - ` for automatic `<br>` insertion
+- Use `Valantis Zervos` in author lists to automatically bold your name in generated HTML
 - All text is automatically HTML-escaped for security
-- The generator preserves the exact HTML structure you had before
+- Only edit `cv-data.json`; `index.html` is generated and should not be edited by hand
 
 ## File Structure
 
 ```
 data/
-  └── cv-data.json          # Your CV data (edit this!)
-sections/                   # Generated HTML files (auto-generated)
-scripts/
-  └── generate-sections.js  # Generator script
+  └── cv-data.json       # Your CV data (edit this)
+generate_html.py         # Generates index.html
+generate_latex.py        # Generates cv.tex
+index.html               # Generated website (do not edit manually)
 ```
 
-**Important**: Only edit `cv-data.json`. The files in `sections/` are auto-generated and will be overwritten when you run `npm run build`.
-
-
+**Important**: Only edit `cv-data.json`. Running `python generate_html.py` will overwrite `index.html`.
