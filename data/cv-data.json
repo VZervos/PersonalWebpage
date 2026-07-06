@@ -128,10 +128,10 @@
         {
           "authors": "Valantis Zervos, Iordanis Sapidis, Apostolos Baniotis, Nikos Kontonasios, Katerina Papantoniou, Michalis Mountantonakis, Pavlos Fafalios, Yannis Tzitzikas, Shriram Piramanayagam, Amela Fejza, Roufei Lai, Yang Ren, Pavlos Vougiouklis, Jeff Z. Pan",          ",title": "From Scientific Text to Decision Support: A Digital Workflow for Ecosystem Restoration Analysis",
           "title": "Knowledge Graph Verbalization in the Era of LLMs: A Survey",
-          "status2python generate_html.py": "Submitted to IEEE Access"
+          "status2": "To be submitted"
         },
         {
-          "authors": "Yannis Marketakis, Michalis Mountantonakis, Pavlos Fafalios, Valantis Zervos, Anastasia Analyti, Arne Langlet, Anton Ellenbroek, Kim J. Friedman, Marcel Mallow and Yannis Tzitzikas",          ",title": "Analysis of Large Numbers of Scientific Papers: A Case Study on Finding the Focus of Ecosystem Restoration Intervention",
+          "authors": "Yannis Marketakis, Michalis Mountantonakis, Pavlos Fafalios, Valantis Zervos, Anastasia Analyti, Arne Langlet, Anton Ellenbroek, Kim J. Friedman, Marcel Mallow and Yannis Tzitzikas",
           "title": "From Scientific Text to Decision Support: A Digital Workflow for Ecosystem Restoration Analysis",
           "status": "Accepted to HAICTA 2026"
         },
@@ -278,6 +278,14 @@
   },
   "schoolsSeminars": {
     "entries": [
+      {
+        "date": "22 June - 3 July 2026",
+        "subtitle": "EIB Summer School 2026",
+        "title": "Shaping Europe's Future",
+        "institution": "European Investment Bank (EIB), Luxembourg",
+        "description": "Selected as one of 82 participants from over 600 applicants across Europe for the EIB Summer School, an intensive programme on the role of the European Investment Bank in financing projects supporting EU priorities. Followed the Projects track, focusing on project appraisal, infrastructure, transport, energy, and innovation, while collaborating in an international multidisciplinary team and engaging with EIB experts and senior management through seminars, case studies, and Youth Talks.",
+        "logo": "resources/logos/eib.png"
+      },
       {
         "date": "25-29 May 2026",
         "subtitle": "INGENIUM Senior Summer School 2026",
