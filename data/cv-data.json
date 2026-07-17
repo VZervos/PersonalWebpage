@@ -279,6 +279,14 @@
   "schoolsSeminars": {
     "entries": [
       {
+        "date": "16 & 17 July 2026",
+        "subtitle": "European Summer School 2026",
+        "title": "AI For Science",
+        "institution": "Hellenic Institute of Advanced Studies (HIAS), Athens, Greece",
+        "description": "Selected as a fellow to attend the AI for Science European Summer School, a two-day programme exploring the latest advances in artificial intelligence for scientific research. Participated in lectures and discussions on state-of-the-art AI methods, their applications across diverse scientific disciplines, and the key challenges and bottlenecks in AI-driven research.",
+        "logo": "resources/logos/hias.png"
+      },
+      {
         "date": "22 June - 3 July 2026",
         "subtitle": "EIB Summer School 2026",
         "title": "Shaping Europe's Future",
