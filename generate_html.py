@@ -464,7 +464,7 @@ def generate_schools_seminars(data):
                                         <p>{escape_html(entry['description'])}</p>
                                     </div>
                                 </div>'''
-        entries.append(wrap_grid_entry(inner, density='wide'))
+        entries.append(wrap_grid_entry(inner, density='compact'))
     
     entries_html = '\n'.join(entries)
     return f'''<section id="schoolsseminars">
@@ -505,7 +505,7 @@ def generate_volunteering(data):
                                         <p>{escape_html(entry['description'])}</p>
                                     </div>
                                 </div>'''
-        html += '\n' + wrap_grid_entry(inner, density='wide')
+        html += '\n' + wrap_grid_entry(inner, density='compact')
     
     html += f'''\n                    {grid_row_close()}
                 </div>
@@ -531,7 +531,7 @@ def generate_volunteering(data):
                                         <p>{escape_html(entry['description'])}</p>
                                     </div>
                                 </div>'''
-        html += '\n' + wrap_grid_entry(inner, density='wide')
+        html += '\n' + wrap_grid_entry(inner, density='compact')
     
     html += f'''\n                    {grid_row_close()}
                 </div>
