@@ -17,7 +17,7 @@
   "shortBio": {
     "paragraphs": [
       "I am currently a postgraduate student at the Computer Science Department of the University of Crete (CSD, UoC), which is ranked first in Greece in Informatics and Computer Science. I hold a BSc from the same department (GPA: 9.57/10), graduating second in my cohort.",
-      "Since my second year of undergraduate studies, I have been a scholar at FORTH-ICS, contributing to research and industrial projects in collaboration with institutions such as the National Documentation and Electronic Content Centre of Greece (EKT), Huawei, and the Food and Agriculture Organization (FAO) of the United Nations. My work spans system development and research within the Information Systems Laboratory (ISL) at FORTH-ICS and the Computer Science Department of the University of Crete. I am currently a graduate researcher, working on ongoing projects alongside my master's thesis.",
+      "Since my second year of undergraduate studies, I have been a scholar at FORTH-ICS, contributing to research and industrial projects in collaboration with institutions such as the National Documentation and Electronic Content Centre of Greece (EKT), Huawei, and the Food and Agriculture Organization (FAO) of the United Nations. My work spans system development and research within the Information Systems Laboratory (ISL) at FORTH-ICS and the Computer Science Department of the University of Crete. I am currently a graduate research fellow, working on ongoing projects alongside my master's thesis.",
       "I have authored three research papers, one workshop paper, and one technical report, with publications appearing in venues such as TPDL, IJCKG, and the TGD Workshop at EDBT, along with an additional submission to HAICTA. I have received three scholarships, including national-level distinctions, and multiple academic awards. I have also achieved top rankings in academic competitions, including first place at the INGENIUM Senior Winter School (project: ApolloMed), second place in an entrepreneurship competition at the University of Crete (project: Triangle), and a top-five finish at the FuturEd AI Hackathon (project: MentorMind).",
       "I have served as a Distinguished Undergraduate Teaching Assistant at the University of Crete and am currently a member of the INGENIUM Student Board, representing the University of Crete.",
       "My research interests include Web and Semantic Data Management, Knowledge Graphs, and their integration with Large Language Models (LLMs)."
@@ -190,7 +190,7 @@
       },
       {
         "date": "July 2023 - Present",
-        "title": "Graduate Researcher at FORTH",
+        "title": "Graduate Research Fellow at FORTH",
         "institution": "FORTH-Institute of Computer Science, Heraklion, Greece",
         "description": "Conduct research and development in the areas of Knowledge Graphs, Web and Semantic Data Management, and Large Language Models. Design and implement systems for data processing, information extraction, and knowledge-driven applications, with a focus on integrating structured data with modern AI methods. Some projects also included full-stack development. Previously: Undergraduate Research Fellow.",
         "logo": "resources/logos/isl.png"
