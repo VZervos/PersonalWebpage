@@ -126,14 +126,19 @@
     "byYear": {
       "2026": [
         {
-          "authors": "Valantis Zervos, Iordanis Sapidis, Apostolos Baniotis, Nikos Kontonasios, Katerina Papantoniou, Michalis Mountantonakis, Pavlos Fafalios, Yannis Tzitzikas, Shriram Piramanayagam, Amela Fejza, Roufei Lai, Yang Ren, Pavlos Vougiouklis, Jeff Z. Pan",          ",title": "From Scientific Text to Decision Support: A Digital Workflow for Ecosystem Restoration Analysis",
+          "authors": "Valantis Zervos, Chrysostomos Zeginis, and Dimitris Plexousakis",
+          "title": "Knowledge Graph-based Workflow Validation Using PROV Graphs",
+          "status2": "Submitted to eScience 2026 - 1st GDSKA Workshop"
+        },
+        {
+          "authors": "Valantis Zervos, Iordanis Sapidis, Apostolos Baniotis, Nikos Kontonasios, Katerina Papantoniou, Michalis Mountantonakis, Pavlos Fafalios, Yannis Tzitzikas, Shriram Piramanayagam, Amela Fejza, Roufei Lai, Yang Ren, Pavlos Vougiouklis, Jeff Z. Pan",
           "title": "Knowledge Graph Verbalization in the Era of LLMs: A Survey",
-          "status2": "To be submitted"
+          "status2": "Submitted to KAIS 2026"
         },
         {
           "authors": "Yannis Marketakis, Michalis Mountantonakis, Pavlos Fafalios, Valantis Zervos, Anastasia Analyti, Arne Langlet, Anton Ellenbroek, Kim J. Friedman, Marcel Mallow and Yannis Tzitzikas",
           "title": "From Scientific Text to Decision Support: A Digital Workflow for Ecosystem Restoration Analysis",
-          "status": "Accepted to HAICTA 2026"
+          "status": "Accepted at HAICTA 2026"
         },
         {
           "authors": "Valantis Zervos, Spyridon Doukeris, Kiki Miniadou, Giannis Vassiliou, Sophia Sideri and Haridimos Kondylakis",
