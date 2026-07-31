@@ -1,0 +1,52 @@
+"references": {
+    "entries": [
+      {
+        "name": "Yannis Tzitzikas",
+        "email": "tzitzik@ics.forth.gr",
+        "positions": [
+          "Professor at University of Crete",
+          "Affiliated Researcher at ICS-FORTH",
+          "Deputy Chair at Computer Science Department, University of Crete"
+        ]
+      },
+      {
+        "name": "Kostas Magoutis",
+        "email": "magoutis@ics.forth.gr",
+        "positions": [
+          "Associate Professor at University of Crete",
+          "Collaborating Researcher at ICS-FORTH",
+          "Chair at Computer Science Department, University of Crete"
+        ]
+      },
+      {
+        "name": "Noni Rizopoulou",
+        "email": "nrizop@csd.uoc.gr",
+        "positions": [
+          "Professor at University of Crete"
+        ]
+      },
+      {
+        "name": "Yannis Marketakis",
+        "email": "marketak@ics.forth.gr",
+        "positions": [
+          "Senior Research Engineer and Technical Head of CCI at ICS-FORTH"
+        ]
+      },
+      {
+        "name": "Vangelis Kritsotakis",
+        "email": "vkrits@ics.forth.gr",
+        "positions": [
+          "Software Engineer at ICS-FORTH"
+        ]
+      },
+      {
+        "name": "Dimitris Sampsonidis",
+        "email": "d.sampsonidis@uoc.gr",
+        "positions": [
+          "Co-Founder At CareerCon",
+          "Co-Founder at Youth Crete (Region's of Crete NGO)",
+          "Former Career Counsellor at University of Crete"
+        ]
+      }
+    ]
+  },

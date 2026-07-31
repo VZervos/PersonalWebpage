@@ -1216,6 +1216,13 @@ header .social-icon img {
     color: #4b5563;
 }
 
+.section-note {
+    font-style: italic;
+    color: #cbd5e1;
+    font-size: 0.95rem;
+    margin: 0.15rem 0 0.55rem;
+}
+
 .details {
     font-size: 0.9em;
     color: #111827;

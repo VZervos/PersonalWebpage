@@ -438,16 +438,8 @@
     ]
   },
   "references": {
+    "note": "More references available upon request.",
     "entries": [
-      {
-        "name": "Yannis Tzitzikas",
-        "email": "tzitzik@ics.forth.gr",
-        "positions": [
-          "Professor at University of Crete",
-          "Affiliated Researcher at ICS-FORTH",
-          "Deputy Chair at Computer Science Department, University of Crete"
-        ]
-      },
       {
         "name": "Kostas Magoutis",
         "email": "magoutis@ics.forth.gr",
@@ -469,13 +461,6 @@
         "email": "marketak@ics.forth.gr",
         "positions": [
           "Senior Research Engineer and Technical Head of CCI at ICS-FORTH"
-        ]
-      },
-      {
-        "name": "Vangelis Kritsotakis",
-        "email": "vkrits@ics.forth.gr",
-        "positions": [
-          "Software Engineer at ICS-FORTH"
         ]
       },
       {

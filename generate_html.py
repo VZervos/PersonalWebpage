@@ -42,6 +42,7 @@ def render_entry_logo(item):
                     </div>'''
 
 GRID_DENSITY = {
+    'compact_small': 'col-12 col-md-4 col-lg-3',
     'compact': 'col-12 col-md-6 col-lg-4',
     'wide': 'col-12 col-lg-6',
     'single': 'col-12',
@@ -370,7 +371,7 @@ def generate_work_experience(data):
         inner += '''\n                                        </p>
                                     </div>
                                 </div>'''
-        entries.append(wrap_grid_entry(inner, density='wide'))
+        entries.append(wrap_grid_entry(inner, density='compact'))
     
     entries_html = '\n'.join(entries)
     return f'''<section id="workexperience">
@@ -422,7 +423,7 @@ def generate_software_projects(data):
                     <h2><i class="fa-solid fa-pen"></i> Course Projects</h2>'''
     
     if 'courseProjects' in data['softwareProjects']:
-        html += f'\n                    <div class="institution">{escape_html(data["softwareProjects"]["courseProjects"]["note"])}</div>\n                    {grid_row_open()}'
+        html += f'\n                    <div class="section-note">{escape_html(data["softwareProjects"]["courseProjects"]["note"])}</div>\n                    {grid_row_open()}'
         
         for project in data['softwareProjects']['courseProjects']['entries']:
             date_html = escape_html(project['date'])
@@ -505,7 +506,7 @@ def generate_volunteering(data):
                                         <p>{escape_html(entry['description'])}</p>
                                     </div>
                                 </div>'''
-        html += '\n' + wrap_grid_entry(inner, density='compact')
+        html += '\n' + wrap_grid_entry(inner, density='compact_small')
     
     html += f'''\n                    {grid_row_close()}
                 </div>
@@ -515,7 +516,7 @@ def generate_volunteering(data):
             <div class="section-content col-12 col-md">
                 <div>
                     <h2><i class="fa-solid fa-tree"></i> Other Volunteering</h2>
-                    <div class="institution">
+                    <div class="section-note">
                         {escape_html(data['volunteering']['other']['note'])}
                     </div>
                     {grid_row_open()}'''
@@ -577,7 +578,7 @@ def generate_languages_hobbies_references(data):
                                     <div class="title">{escape_html(hobby['title'])}</div>
                                     <div class="institution">{escape_html(hobby['description'])}</div>
                                 </div>'''
-        html += '\n' + wrap_grid_entry(inner)
+        html += '\n' + wrap_grid_entry(inner, density='compact_small')
     
     html += f'''\n                    {grid_row_close()}
                 </div>
@@ -587,6 +588,7 @@ def generate_languages_hobbies_references(data):
             <div class="section-content col-12 col-md">
                 <div>
                     <h2><i class="fa-solid fa-square-check"></i> References</h2>
+                    {f'<div class="section-note">{escape_html(data["references"]["note"])}</div>' if data['references'].get('note') else ''}
                     {grid_row_open()}'''
     
     for ref in data['references']['entries']:
@@ -607,7 +609,7 @@ def generate_languages_hobbies_references(data):
         inner += '''\n                                        </p>
                                     </div>
                                 </div>'''
-        html += '\n' + wrap_grid_entry(inner, 'reference-entry')
+        html += '\n' + wrap_grid_entry(inner, 'reference-entry', density='compact_small')
     
     html += f'''\n                    {grid_row_close()}
                 </div>

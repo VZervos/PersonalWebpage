@@ -26,12 +26,7 @@ This directory contains the JSON data file that stores all your CV information.
    ```
    This regenerates `index.html` from `cv-data.json`.
 
-3. **Optional LaTeX CV**: To regenerate the PDF-oriented LaTeX source as well:
-   ```bash
-   python generate_latex.py
-   ```
-
-4. **View your changes**: Open `index.html` in your browser to see the updated content.
+3. **View your changes**: Open `index.html` in your browser to see the updated content.
 
 ## Data Structure Examples
 
@@ -93,7 +88,6 @@ Optional field:
 data/
   └── cv-data.json       # Your CV data (edit this)
 generate_html.py         # Generates index.html
-generate_latex.py        # Generates cv.tex
 index.html               # Generated website (do not edit manually)
 ```
 
