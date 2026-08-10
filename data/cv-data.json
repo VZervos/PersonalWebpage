@@ -128,7 +128,7 @@
         {
           "authors": "Valantis Zervos, Chrysostomos Zeginis, and Dimitris Plexousakis",
           "title": "Knowledge Graph-based Workflow Validation Using PROV Graphs",
-          "status2": "Submitted to eScience 2026 - GDSKA Workshop"
+          "status": "Accepted at eScience 2026 - GDSKA Workshop"
         },
         {
           "authors": "Valantis Zervos, Iordanis Sapidis, Apostolos Baniotis, Nikos Kontonasios, Katerina Papantoniou, Michalis Mountantonakis, Pavlos Fafalios, Yannis Tzitzikas, Shriram Piramanayagam, Amela Fejza, Roufei Lai, Yang Ren, Pavlos Vougiouklis, Jeff Z. Pan",
@@ -143,19 +143,22 @@
         {
           "authors": "Valantis Zervos, Spyridon Doukeris, Kiki Miniadou, Giannis Vassiliou, Sophia Sideri and Haridimos Kondylakis",
           "title": "GSS: Graph Semantic Summarization using answer-centered explanatory subgraphs",
-          "url": "https://ceur-ws.org/Vol-4192/TGD-paper6.pdf"
+          "url": "https://ceur-ws.org/Vol-4192/TGD-paper6.pdf",
+          "status-venue": "EDBT 2026 - TGD Workshop"
         }
       ],
       "2025": [
         {
           "authors": "Sophia Sideri, Emmanouil Patronakis, Evangelos Nikiforos, Isidoros Chatzichrysos, Apostolos Baniotis, Valantis Zervos, Stavros Tzormpatzakis, Michalis Saridakis, Iosif Oikonomakis, Michalis Mountantonakis, Pavlos Fafalios and Yannis Tzitzikas",
           "title": "To Automate or not to Automate the Transcription of Ancient Earthquakes: Toward a Global Knowledge Graph about Ancient Earthquakes, IJCKG 2025",
-          "url": "https://link.springer.com/chapter/10.1007/978-981-95-5009-8_26"
+          "url": "https://link.springer.com/chapter/10.1007/978-981-95-5009-8_26",
+          "status-venue": "IJCKG 2025"
         },
         {
           "authors": "Iordanis Sapidis, Valantis Zervos, Michalis Mountantonakis, and Yannis Tzitzikas",
           "title": "Interactive and Provenance-aware Search and QA over Documents using LLMs, RAG and Knowledge Graph Verbalization, TPDL 2025",
-          "url": "https://www.semanticscholar.org/paper/Interactive-and-Provenance-Aware-Search-and-QA-over-Sapidis-Zervos/de95aebc56674571d8aaefd53abff5d667e9a55a"
+          "url": "https://www.semanticscholar.org/paper/Interactive-and-Provenance-Aware-Search-and-QA-over-Sapidis-Zervos/de95aebc56674571d8aaefd53abff5d667e9a55a",
+          "status-venue": "TPDL 2025"
         }
       ]
     }

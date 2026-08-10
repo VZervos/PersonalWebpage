@@ -96,6 +96,8 @@ def render_status_badges(item):
         badges.append(f'<span class="status-badge status-accepted">{escape_html(item["status"])}</span>')
     if item.get('status2'):
         badges.append(f'<span class="status-badge status-to_submit">{escape_html(item["status2"])}</span>')
+    if item.get('status-venue'):
+        badges.append(f'<span class="status-badge status-venue">{escape_html(item["status-venue"])}</span>')
     if not badges:
         return ''
     return f'<div class="entry-badges">{"".join(badges)}</div>'

@@ -536,6 +536,7 @@ nav {
     .status-accepted,
     .status-under_preparation,
     .status-to_submit,
+    .status-venue,
     .status-badge {
         font-size: 0.72rem;
         padding: 0.18rem 0.5rem;
@@ -666,6 +667,10 @@ nav {
 
     .status-badge.status-to_submit {
         background: linear-gradient(135deg, #6b7280 0%, #4b5563 100%);
+    }
+
+    .status-badge.status-venue {
+        background: linear-gradient(135deg, #719fff 0%, #488ff2 100%);
     }
 
     .copy-email-btn {
@@ -898,6 +903,11 @@ a:hover {
 .status-badge.status-to_submit {
     font-style: italic;
     background: linear-gradient(135deg, #6b7280 0%, #4b5563 100%);
+}
+
+.status-badge.status-venue {
+    font-style: italic;
+    background: linear-gradient(135deg, #719fff 0%, #488ff2 100%);
 }
 
 .publication-link {
