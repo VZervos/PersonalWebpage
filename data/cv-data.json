@@ -126,6 +126,11 @@
     "byYear": {
       "2026": [
         {
+          "authors": "Apostolos Baniotis, Katerina Papantoniou, Michalis Mountantonakis, Nikos Kontonasios, Iordanis Sapidis, Pavlos Fafalios, Valantis Zervos, Yannis Tzitzikas, Ruofei Lai, Amela Fejza, Shriram Piramanayagam, Pavlos Vougiouklis, and Jeff Z. Pan",
+          "title": "Adapting WebNLG to DBpedia Evolution for Evaluating LLM-based Triple Extraction",
+          "status": "Accepted at ISWC 2026 - GLOW Workshop"
+        },
+        {
           "authors": "Valantis Zervos, Chrysostomos Zeginis, and Dimitris Plexousakis",
           "title": "Knowledge Graph-based Workflow Validation Using PROV Graphs",
           "status": "Accepted at eScience 2026 - GDSKA Workshop"
@@ -133,7 +138,7 @@
         {
           "authors": "Valantis Zervos, Iordanis Sapidis, Apostolos Baniotis, Nikos Kontonasios, Katerina Papantoniou, Michalis Mountantonakis, Pavlos Fafalios, Yannis Tzitzikas, Shriram Piramanayagam, Amela Fejza, Roufei Lai, Yang Ren, Pavlos Vougiouklis, Jeff Z. Pan",
           "title": "Knowledge Graph Verbalization in the Era of LLMs: A Survey",
-          "status2": "Submitted to KAIS 2026"
+          "status2": "Under preparation"
         },
         {
           "authors": "Yannis Marketakis, Michalis Mountantonakis, Pavlos Fafalios, Valantis Zervos, Anastasia Analyti, Arne Langlet, Anton Ellenbroek, Kim J. Friedman, Marcel Mallow and Yannis Tzitzikas",
