@@ -16,13 +16,13 @@
   },
   "shortBio": {
     "paragraphs": [
-      "I am currently a postgraduate student at the Computer Science Department of the University of Crete (CSD, UoC), which is ranked first in Greece in Informatics and Computer Science. I hold a BSc from the same department (GPA: 9.57/10), graduating second in my cohort.",
-      "Since my second year of undergraduate studies, I have been a scholar at FORTH-ICS, contributing to research and industrial projects in collaboration with institutions such as the National Documentation and Electronic Content Centre of Greece (EKT), Huawei, and the Food and Agriculture Organization (FAO) of the United Nations. My work spans system development and research within the Information Systems Laboratory (ISL) at FORTH-ICS and the Computer Science Department of the University of Crete. I am currently a graduate research fellow, working on ongoing projects alongside my master's thesis.",
-      "I have authored three research papers, one workshop paper, and one technical report, with publications appearing in venues such as TPDL, IJCKG, and the TGD Workshop at EDBT, along with an additional submission to HAICTA. I have received three scholarships, including national-level distinctions, and multiple academic awards. I have also achieved top rankings in academic competitions, including first place at the INGENIUM Senior Winter School (project: ApolloMed), second place in an entrepreneurship competition at the University of Crete (project: Triangle), and a top-five finish at the FuturEd AI Hackathon (project: MentorMind).",
-      "I have served as a Distinguished Undergraduate Teaching Assistant at the University of Crete and am currently a member of the INGENIUM Student Board, representing the University of Crete.",
-      "My research interests include Web and Semantic Data Management, Knowledge Graphs, and their integration with Large Language Models (LLMs)."
-    ]
-  },
+      "I am a postgraduate student in Computer Science at the University of Crete (CSD, UoC), ranked first in Greece in Informatics and Computer Science. I received my BSc from the same department with a GPA of 9.57/10, graduating second in my cohort.",
+      "Since my second year of undergraduate studies, I have been a scholar at the Foundation for Research and Technology–Hellas (FORTH-ICS), contributing to research and industrial projects in collaboration with organizations including the National Documentation and Electronic Content Centre of Greece (EKT), Huawei, and the Food and Agriculture Organization of the United Nations (FAO). My work spans research and systems development within the Information Systems Laboratory (ISL) at FORTH-ICS and the Computer Science Department of the University of Crete. I am currently a graduate research fellow, working on ongoing research projects alongside my MSc thesis.",
+      "I have authored and co-authored more than five research papers, including workshop papers and technical reports, with publications in venues such as TPDL, IJCKG, and HAICTA. I have received three scholarships, including national-level distinctions, as well as multiple academic awards. Notable distinctions include ranking 8th nationally for the Nicholas and Robert Askounes Ashford Educational Scholarship and placing in the top 13% of applicants for the Summer@EPFL Internship Program.",
+      "I have also achieved top rankings in academic and innovation competitions, including first place at the INGENIUM Senior Winter School (ApolloMed), second place in a University of Crete entrepreneurship competition (Triangle), and a top-five finish at the FuturEd AI Hackathon (MentorMind).",
+      "I have served as a Distinguished Undergraduate Teaching Assistant at the University of Crete and currently serve on the INGENIUM Student Board, representing the University of Crete.",
+      "My research interests include Web and Semantic Data Management, Knowledge Graphs and KG Summarization, with a particular focus on their integration with Large Language Models (LLMs) and the study of hallucinations."
+  ]},
   "education": {
     "entries": [
       {
@@ -448,6 +448,15 @@
   "references": {
     "note": "More references available upon request.",
     "entries": [
+      {
+        "name": "Haridimos Kondylakis",
+        "email": "kondylak@ics.forth.gr",
+        "positions": [
+          "MSc Supervisor",
+          "Associate Professor at University of Crete",
+          "Affiliated Researcher at ICS-FORTH"
+        ]
+      },
       {
         "name": "Kostas Magoutis",
         "email": "magoutis@ics.forth.gr",
